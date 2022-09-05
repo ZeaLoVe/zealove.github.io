@@ -8,12 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Sep 2022 15:44:17 +0800</lastBuildDate><atom:link href="https://zealove.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
+      <title>Sqllogic test</title>
       <link>https://zealove.github.io/posts/my-first-post/</link>
       <pubDate>Mon, 05 Sep 2022 15:44:17 +0800</pubDate>
       
       <guid>https://zealove.github.io/posts/my-first-post/</guid>
-      <description></description>
+      <description>The database return right with different handlers, for example MySQL and http
+Usage Prepare Change to the scripts dir:
+cd tests/logictest/ Make sure python3 is installed.
+You can use Poetry to install dependency, dependency see tests/pyproject.toml
+If you are familiar with pip, you can install dependency with:
+pip install -r requirements.txt Need to know  Cases from tests/suites/0_stateless/ to tests/logictest/suites/gen/ If a case file already exists in gen/, gen_suites will ignore it.</description>
     </item>
     
   </channel>
