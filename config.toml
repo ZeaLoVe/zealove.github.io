@@ -1,0 +1,4 @@
+baseURL = 'https://zealove.github.io/'
+languageCode = 'en-us'
+title = 'ZeaLoVe Github Pages'
+theme = "ananke" 
