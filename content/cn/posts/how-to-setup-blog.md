@@ -8,6 +8,7 @@ featured_image: '/images/post-0002.jpg'
 # 中文版
 
 我选择用hugo加上github page的方式进行博客托管，之前也尝试过自建，大学期间也在一些托管网站上发过 如 https://www.iteye.com/blog/user/zealove。
+
 基本的流程从这两篇入门文章就能搞定了，通过github action可以实现全程的自动发布，还是很方便的。
 
 1. https://gohugo.io/getting-started/quick-start/
