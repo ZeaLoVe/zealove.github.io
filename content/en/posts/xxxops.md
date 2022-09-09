@@ -7,7 +7,7 @@ draft: false
 
 Crossing boundaries always has a magical charm, and many scientific breakthroughs are done at the intersection of disciplines.
 
-When we go too long in a direction or methodology to find the way, perhaps a change of direction to find the intersection is a good choice.
+When we go too long in a direction to find the way, perhaps a change of direction to find the intersection is a good choice.
 
 Another example is Masayoshi Son's approach to thinking about patents by randomly fishing for a few words from the dictionary to arrange combinations, which has to be admired.
 
@@ -17,7 +17,7 @@ This is one of the earliest heard, in fact, here Dev is not only R&D also includ
 
 This process is accompanied by the rise of many concepts, including agile, cloud-native, SRE, CICD, and so on. Each name implies a large number of technology stacks and methodologies.
 
-So some people say DevOps itself is a concept rather than a development model, and that implementing DevOps requires a lot of infrastructure transformation including development tools such as IaC, automation, CICD Pipeline; and infrastructure level refinement such as container orchestration, serverless architecture.
+So some people say DevOps itself is a concept rather than a development model, and that implementing DevOps requires a lot of infrastructure transformation including development tools such as IaC, automation, CICD Pipeline; and infrastructure level such as container orchestration, serverless architecture.
 
 Hard for me to go on, a lot of technology intersection within this one term, before I saw a DevOps technology learning roadmap, full of a screen not enough to put on.
 
@@ -29,13 +29,13 @@ Like DevOps, DevSecOps emphasizes the use of tools that integrate all security-r
 
 Provide security-related training to software development and operations staff, and establish a clear system of security rules.
 
-In addition to process security, build dependencies and build products should be just as secure. Always pay attention to vulnerability information released by dependent technologies including operating systems, container images, third-party libraries, etc. Vulnerabilities should be handled in a timely manner, and patched versions should be updated or more secure alternatives should be adopted.
+In addition to process security, dependencies and build artifacts should be just as secure. Always pay attention to vulnerability information released by dependent technologies including operating systems, container images, third-party libraries, etc. Vulnerabilities should be handled in a timely manner, and patched versions should be updated or more secure alternatives should be adopted.
 
 There can be no absolute security, but security awareness is indispensable, constantly update the security toolbox and learn how to attack in order to know your enemy. There is also a trade-off between security and rapid iteration.
 
 ## AIOps
 
-This is the first few years of the AI outbreak, the quantitative change in the scale of data triggered a qualitative change in the AI model, AI basically followed the big data, it seems that as long as the set of AI all problems are solved, but I have been deeply skeptical.
+This is the first few years of the AI outbreak, the quantitative change in the scale of data triggered a qualitative change in the AI model, AI basically followed the big data, it seems that with AI all problems can be solved, but I have been deeply skeptical.
 
 But over the years, we have also encountered people mentioning AIOps in the company. At that time, i still work for Ruijie Network, and a group wanted to make the algorithm of early detection of disk failure into the virtualization platform we developed at that time.
 
@@ -47,11 +47,11 @@ So I always think AI is a scenario-based problem, and when that scenario is big 
 
 ## GitOps
 
-GitOps is all about tying the entire CICD process to git and automatically triggering the CICD pipeline by committing changes to code on git. The more famous GitOps tools now, ArgoCD and FluxCD, are based on K8S.
+GitOps is all about tying the entire CICD process to git and automatically triggering the CICD pipeline by committing changes to code on git. The most famous GitOps tools now are ArgoCD and FluxCD, all based on K8S.
 
-I put argoCD, fluxCD, JenkinsX together to compare and accomplish a selection feathures into a table. But in fact, the personal subjective tendency is still relatively heavy after I try these.
+I put argoCD, fluxCD, JenkinsX together to compare and accomplish a selection feathures into a table. But in fact, the personal subjective tendency is still relatively heavy after I try these tools.
 
-Although the argoCD experience is a bit better, I prefer the architecture of FluxCD and the ability to automatically synchronize the latest images. In the end, we didn't use any of the above but chose to control the release process ourselves in the pipeline.
+Although the argoCD experience is a bit better, I prefer the architecture of FluxCD and the ability to automatically synchronize the latest images. In the end, we didn't use any of the above but chose to control the release process ourselves in the pipeline. JenkinsX is just too complicate, my teammates hates jenkins.
 
 The content of GitOps is really not much, and the scenarios for it are rather limited.
 
@@ -65,6 +65,6 @@ It seems to be awesome! In fact, which level of chatops need achive, depends on 
 
 ## Reference
 
-1. [DevSecOps](https://medium.com/digital-transformation-and-platform-engineering/devsecops-automation-and-continuous-security- b2c7d0c883c9)
+1. [DevSecOps](https://medium.com/digital-transformation-and-platform-engineering/devsecops-automation-and-continuous-security-b2c7d0c883c9)
 2. [The Four Stages of ChatOps](https://medium.com/get-put-post/the-four-stages-of-chatops-79cc60fc38a)
-3. [AIOps - The new member in the DevOps Family](https://medium.com/faun/aiops-the-new-member-in-the-devops-family-d76bab14c98e )
+3. [AIOps - The new member in the DevOps Family](https://medium.com/faun/aiops-the-new-member-in-the-devops-family-d76bab14c98e)
