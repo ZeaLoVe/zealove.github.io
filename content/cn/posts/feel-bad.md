@@ -1,7 +1,7 @@
 ---
 title: "感觉不太好"
 date: 2022-09-10T19:20:17+08:00
-draft: false
+draft: true
 featured_image: '/images/post-0006.jpg'
 ---
 
