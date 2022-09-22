@@ -2,6 +2,7 @@
 title: "Just begin to post something"
 date: 2022-09-05T15:44:17+08:00
 draft: false
+summary: 'I have time now.'
 featured_image: '/images/post-0001.jpg'
 ---
 

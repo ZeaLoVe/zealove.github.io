@@ -2,7 +2,8 @@
 title: "My Political View"
 date: 2022-09-09T09:02:17+08:00
 draft: false
-featured_image: '/images/post-0005.jpg'
+summary: 'Do not shot, we are allies!'
+featured_image: '/images/post-0010.jpg'
 ---
 
 In China, the people and even the grassroots party members have little opportunitycan participate in politics, however, such rights are provided in the law but in fact this right is artificially ignored.

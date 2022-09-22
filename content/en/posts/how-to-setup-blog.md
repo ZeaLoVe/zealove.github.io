@@ -3,6 +3,7 @@ title: "How to Setup Blog"
 date: 2022-09-06T15:18:44+08:00
 draft: false
 featured_image: '/images/post-0002.jpg'
+summary: 'You can just skip this.'
 ---
 
 I choose to use hugo and github page for blog hosting, before that I also tried to self-hosted way, during the university I also posted on some hosting sites such as https://www.iteye.com/blog/user/zealove.

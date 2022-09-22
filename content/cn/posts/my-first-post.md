@@ -3,9 +3,8 @@ title: "开始随便发点啥"
 date: 2022-09-05T15:44:17+08:00
 draft: false
 featured_image: '/images/post-0001.jpg'
+summary: '现在开始我有时间更新了'
 ---
-
-# 中文版
 
 ## 重新发文章的缘由
 

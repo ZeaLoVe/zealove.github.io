@@ -3,9 +3,8 @@ title: "如何建博客"
 date: 2022-09-06T15:18:44+08:00
 draft: false
 featured_image: '/images/post-0002.jpg'
+summary: '通常能看到我博客的人并不需要这篇内容，请主动跳过'
 ---
-
-# 中文版
 
 我选择用hugo加上github page的方式进行博客托管，之前也尝试过自建，大学期间也在一些托管网站上发过 如 https://www.iteye.com/blog/user/zealove。
 
