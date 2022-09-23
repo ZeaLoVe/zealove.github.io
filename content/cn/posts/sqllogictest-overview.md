@@ -2,7 +2,7 @@
 title: "sqllogictest方法概览"
 date: 2022-09-22T18:00:55+08:00
 featured_image: '/images/post-0007.jpg'
-summary: '这是一篇毕业纪念文，其实我也不想这样，用周华健的歌词表达就是：其实不想走，其实我想留'
+summary: '这是一篇毕业纪念文'
 draft: false
 ---
 
