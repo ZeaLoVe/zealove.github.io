@@ -3,7 +3,7 @@ title: "软件测试之我见"
 date: 2022-09-22T15:00:55+08:00
 draft: false
 featured_image: '/images/post-0005.jpg'
-summary: '测试很重要，但测试人员却不受重视，这些经验你看完就好，当你开始实施的时候，可能处在一个危险的位置。'
+summary: '测试很重要，大量的场景需要测试，选择执行哪些测试以及自动化测试如何实施是最重要的两个问题'
 ---
 
 ## 背景
@@ -16,7 +16,7 @@ summary: '测试很重要，但测试人员却不受重视，这些经验你看�
 
 1. 比较典型的分类是根据规模，分为小、中、大的测试。其中小测试围绕函数，比较典型的有单元测试（独立进程）；中测试则包括集成测试（独立主机）；大测试包括系统功能测试、e2e测试（集群）
 
-[![各个规模测试用例的比例](/images/test/test-1.png "Percentages By Test Case Count")](https://abseil.io/resources/swe-book/html/ch11.html)
+[![各个规模测试用例的比例](/images/pic/test-1.png "Percentages By Test Case Count")](https://abseil.io/resources/swe-book/html/ch11.html)
 
 2. 从方法论上分类，则包括几个系统方法，比较常见的包括功能测试、模糊测试、混沌工程等
 

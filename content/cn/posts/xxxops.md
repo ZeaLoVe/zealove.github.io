@@ -2,7 +2,7 @@
 title: "谈谈我认识的各种ops"
 date: 2022-09-07T10:00:55+08:00
 featured_image: '/images/post-0003.jpg'
-summary: '运维工作可能是枯燥的，当结合其他领域的内容后，又会焕发生机。'
+summary: '运维工作可能是枯燥的，但结合其他领域的内容后，又会焕发生机。'
 draft: false
 ---
 

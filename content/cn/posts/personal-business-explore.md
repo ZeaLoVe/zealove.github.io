@@ -3,6 +3,7 @@ title: "个人可做的商业探索"
 date: 2022-10-11T15:51:55+08:00
 draft: false
 featured_image: '/images/post-0011.jpg'
+summary: '将全部精力押注在工作上对于多数人是危险的，适当的挖掘一些其他的可能性'
 ---
 
 ## 缘由
@@ -24,9 +25,13 @@ featured_image: '/images/post-0011.jpg'
 所有的赚钱的内容都可以归为以下几类：
 
 - 信息差
-	- 单纯的信息差，低卖高卖
-	- 中介服务，长尾效应
+	- 物质的信息差（低卖高卖、你无我有）
+	- 能力的信息差（培训）
+	- 中介服务
+	- 长尾效应
 - 产品服务
+	- 工具
+	- 娱乐
 - 技能服务
 
 产品服务需要一系列的资源整合，并不是少量的几个人能够轻易搞出来的，因此我不会讨论这个也没资格讨论，需要创业的专题。
@@ -45,16 +50,17 @@ featured_image: '/images/post-0011.jpg'
 
 - 卖货
     - 不需要管理货源
-        - [卖定制T恤](https://printify.com/blog/how-to-start-a-print-on-demand-business/)
+        - 渠道打包定制、仓库、售卖过程，如[卖定制T恤](https://printify.com/blog/how-to-start-a-print-on-demand-business/)
 		    1. 个性化定制售卖渠道 [printify](https://printify.com/)  [printful](https://www.printful.com/)
 		    2. 设计，可以自己找个平台[自己来做](https://www.canva.cn/) 或者招聘设计师或者upwork找兼职设计师做
 		    3. 电商平台上(如shopify这些有跟定制平台合作的渠道)卖
-		- 商品引流
+		- 商品引流取得佣金
 			- 导购平台类似值得买
 			- 视频网站上发布商品信息，提供类似中介服务
     - 需要管理货源（风险在于选择商品品类、库存管理和选择供应商）
         - alibaba 2 amazon 
 		- 视频网站（如tiktok、youtube）挂自己的商品，可以通过平台或者自建独立站
+		- 本地生意的跨境扩展
 - 引流、中介（商品、为第三方推荐付费客户）
 	- 通过搜索引擎广告视频网站搜索主题留言（任何热门的应用都可以尝试，不过在人家热门内容下借楼做广告应该会被讨厌吧）
     - 创作内容推荐（类似公众号、博客里挂广告）
@@ -67,6 +73,8 @@ featured_image: '/images/post-0011.jpg'
 	- Tik Tok
 	- rumble
     - Bilibili
+
+卖货最难的是寻找好卖的品类、靠谱的供应商、如何做营销；视频站点的电商的营销核心是点击量，需要掌握视频制作能力能够把握不同地区的热点，打造爆品。
 
 ## 后续
 

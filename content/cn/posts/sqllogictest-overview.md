@@ -2,7 +2,7 @@
 title: "sqllogictest方法概览"
 date: 2022-09-22T18:00:55+08:00
 featured_image: '/images/post-0007.jpg'
-summary: '这是一篇毕业纪念文'
+summary: '这是一篇毕业纪念文(名词解释 毕业=失业)'
 draft: false
 ---
 

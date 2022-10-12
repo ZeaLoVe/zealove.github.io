@@ -2,7 +2,7 @@
 title: "My view about X-ops"
 date: 2022-09-07T10:00:55+08:00
 featured_image: '/images/post-0003.jpg'
-summary: 'Operation is not boring, when you add something to it.'
+summary: 'Software Ops is not boring when you add something to it.'
 draft: false
 ---
 
