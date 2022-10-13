@@ -1,7 +1,7 @@
 ---
 title: "我的政治观"
 date: 2022-09-09T09:02:17+08:00
-draft: false
+draft: true
 featured_image: '/images/post-0010.jpg'
 summary: '表达政治观点是危险的，但很多东西越辩越明，不要害怕辩论，做一个成长型的人'
 ---

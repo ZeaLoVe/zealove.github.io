@@ -1,7 +1,7 @@
 ---
 title: "My Political View"
 date: 2022-09-09T09:02:17+08:00
-draft: false
+draft: true
 summary: 'Do not shot, we are allies!'
 featured_image: '/images/post-0010.jpg'
 ---
