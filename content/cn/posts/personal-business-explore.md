@@ -95,3 +95,5 @@ summary: '将全部精力押注在工作上对于多数人是危险的，适当�
 - [AI 问答](https://www.wolframalpha.com/)
 - [AI 制作视频](https://lumen5.com/)
 - [AI 写作](https://www.jasper.ai/)
+- [通过AI整活](https://mp.weixin.qq.com/s/DD5R022OOXQ29-0czR_Wnw)
+- [通过文本生成视频的AI模型](https://github.com/CompVis/stable-diffusion)
