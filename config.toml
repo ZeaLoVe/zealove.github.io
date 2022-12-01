@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = "ZeaLoVe's Blogs"
 theme = "ananke" 
 publishDir = "./public"
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "cn"
 
 [languages]
   [languages.cn]
