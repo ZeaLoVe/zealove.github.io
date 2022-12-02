@@ -3,10 +3,10 @@ baseURL = 'https://zealove.github.io/'
 title = "ZeaLoVe's Blogs"
 theme = "ananke" 
 publishDir = "./public"
-DefaultContentLanguage = "cn"
+DefaultContentLanguage = "zh"
 
 [languages]
-  [languages.cn]
+  [languages.zh]
     title = "ZeaLoVe's Blogs"
     weight = 1
     contentDir = "content/cn"
