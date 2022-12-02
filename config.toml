@@ -1,5 +1,5 @@
 baseURL = 'https://zealove.github.io/'
-languageCode = 'en-us'
+# languageCode = 'en-us'
 title = "ZeaLoVe's Blogs"
 theme = "ananke" 
 publishDir = "./public"
