@@ -56,6 +56,11 @@ GitOps就是将整个CICD流程跟git绑定起来，通过git上的代码提交�
 
 讲真GitOps的内容确实不多，而且适用的场景也比较有限，运行多版本的需求就无法满足，回滚版本也是通过取消提交来实现的。
 
+补充：Argo 和 flux 双双从CNCF毕业了。
+
+- [argo 毕业](https://www.cncf.io/announcements/2022/12/06/the-cloud-native-computing-foundation-announces-argo-has-graduated/)
+- [flux 毕业](https://www.cncf.io/announcements/2022/11/30/flux-graduates-from-cncf-incubator/)
+
 ## ChatOps
 
 这个概念其实我是第一次听说，但发现现在自动化工具越来越多，IM也越做能力越丰富了，集成了大量的机器人来给群组发消息，ChatOps更进了一步，通过人回复指定的命令就可以在聊天中解决工作问题。
@@ -63,6 +68,10 @@ GitOps就是将整个CICD流程跟git绑定起来，通过git上的代码提交�
 包括在Github的PR里，通过命令对PR进行代码评审、指派、设置状态等。运维权限的审批申请和批复，也可以做到在聊天中搞定，执行完回复一句完成自动回收权限。
 
 看起来似乎非常美好！其实实现的难度也不一样，还是要根据自己IT系统的能力一步一个脚印来吧。
+
+## DataOps
+
+待补充
 
 ## 参考资料
 
