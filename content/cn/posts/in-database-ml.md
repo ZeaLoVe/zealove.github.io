@@ -67,7 +67,7 @@ summary: 'In-Database Machine learning, 本文在chatGPT辅助下完成'
 - 灵活性和可扩展性：选择的模型格式是否具有良好的灵活性和可扩展性，以便适应不同的应用需求和数据集大小。
 - 应用广泛性：选择的模型格式是否被广泛应用和支持，是否有足够多的工具和资源来帮助模型开发和部署。
 
-基于以上几个方面，目前较为常用的模型格式包括TensorFlow的SavedModel格式、ONNX格式、Keras的H5格式、PyTorch的.pt模型格式、caffe模型格式等。其中，ONNX格式被多个框架支持，可以实现模型的跨平台部署；PMML（Predictive Model Markup Language）是一种用于描述和部署预测模型的XML格式，它允许将多个厂商和开源软件系统中的预测模型保存到单个标准格式中；SavedModel格式具有良好的性能和扩展性；H5格式则适合于Keras模型的保存。多框架支持和开放的标准通常是我们的首选，ONNX和PMML都是用于机器学习模型的开放标准格式。
+基于以上几个方面，目前较为常用的模型格式包括TensorFlow的SavedModel格式、ONNX格式、Keras的H5格式、PyTorch的.pt模型格式、caffe模型格式等。其中，ONNX格式被多个框架支持，可以实现模型的跨平台部署；PMML（Predictive Model Markup Language）是一种用于描述和部署预测模型的XML格式，它允许将多个厂商和开源软件系统中的预测模型保存到单个标准格式中；SavedModel格式具有良好的性能和扩展性；H5格式则适合于Keras模型的保存。多框架支持和开放的标准通常是我们的首选，ONNX同时满足多个机器学习框架支持，并有开放联盟负责制定模型格式，属于可以优先考虑的模型格式。
 
 说明: ONNX是[hugging face](https://huggingface.co/docs/transformers/main_classes/onnx)采用的格式
 
