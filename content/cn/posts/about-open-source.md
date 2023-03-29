@@ -6,6 +6,10 @@ featured_image: '/images/post-0013.jpg'
 summary: '开源很好，哪里好呢？'
 ---
 
+## 开源的本质
+
+创作者的连接、信息的连接
+
 ## 优势
 
 - 信息公开，方便证明商业上的可行性对于融资有益，孕育各自可能的商业模式
@@ -53,6 +57,12 @@ summary: '开源很好，哪里好呢？'
 - 选取有价值的内部项目进行开源运作
 - 关注技术趋势
 
+## 开源风险
+
+### 开源是否有国界？
+
+### 开源安全 OpenSSFR
+
 ## 其他
 
 - 开源项目的开发方法论，包括开发流程、工具、质量保障、路线图和版本计划
@@ -62,3 +72,5 @@ summary: '开源很好，哪里好呢？'
 - [开源 维基百科](https://en.wikipedia.org/wiki/Open_source)
 - [谷歌开源](https://opensource.google/)
 - [什么是开源 红帽](https://www.redhat.com/en/topics/open-source/what-is-open-source)
+- [开源意味着不问责，我们准备好应对比 Log4Shell 更大的安全危机了吗？](https://www.infoq.cn/article/ftjYfScOfpLFLTIUvwGe)
+- [The Open Source Software Security Foudation](https://openssf.org/)
