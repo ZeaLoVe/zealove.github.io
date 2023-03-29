@@ -1,8 +1,8 @@
 ---
 title: "通过数据库进行机器学习"
-date: 2023-3-29T09:30:55+08:00
+date: 2023-03-29T09:30:55+08:00
 draft: false
-featured_image: '/images/post-0018.jpg'
+featured_image: '/images/post-0017.jpg'
 summary: 'In-Database Machine learning, 本文在chatGPT辅助下完成'
 ---
 
@@ -94,7 +94,7 @@ summary: 'In-Database Machine learning, 本文在chatGPT辅助下完成'
 - [PyTorch](https://github.com/pytorch/serve)
 - [飞桨](https://github.com/PaddlePaddle/FastDeploy)
 
-模型格式和部署软硬的异构问题，使得基于docker部署已经成为主流的方案，极大的简化了部署环节也产生了一批托管部署的平台。
+模型格式和部署软硬的异构问题，使得基于docker部署已经成为主流的方案，极大的简化了部署环节也产生了一批托管部署的平台。以上部署方式通常使用REST接口进行调用，如果采用本地下载模型的方式可以通过框架接口调用模型进行预测。
 
 ## 数据库中的机器学习
 
@@ -123,8 +123,8 @@ summary: 'In-Database Machine learning, 本文在chatGPT辅助下完成'
     2.  Microsoft SQL Server：SQL Server Data Mining支持使用SQL语言进行模型训练和预测。
     3.  IBM：IBM的SPSS Modeler支持使用SQL语言来生成预测函数。
     4.  PostgreSQL：PG-Strom扩展提供了使用CUDA CUDNN以及基于图片数据的深度学习支持，但是需要额外的安装和配置。
-- 云厂商提供如 Bigquery ML
-- 第三方工具，目前仅发现了 Mindsdb 一款基于SQL的自动化机器学习工具，它可以帮助用户快速从结构化数据中构建、训练和部署机器学习模型，无需深入了解机器学习的原理和算法，也不需要编写复杂的代码。
+- 云厂商提供如 Bigquery ML，是一种AutoML工具，可以在BigQuery（一款基于云计算的分布式数据仓库）内使用标准SQL实现模型的训练、评估和预测。BigQuery ML内置几种常见类型的模型，例如线性回归、逻辑回归和GBDT等，并且支持高度扩展和快速训练。
+- 第三方工具，目前仅发现了 Mindsdb 一款基于SQL的自动化机器学习工具，它可以帮助用户快速从结构化数据中构建、训练和部署机器学习模型，无需深入了解机器学习的原理和算法，也不需要编写复杂的代码，其可以通过导入[hugging face transformers](https://github.com/huggingface/transformers)里的模型扩展能力，也可以实现自己的ML handlers。
 
 PS：虽然[Madlib](https://madlib.apache.org/)功能也类似但仅提供机器学习的能力；还有redis AI，但已经不是数据库领域了。
 
