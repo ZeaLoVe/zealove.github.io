@@ -2,7 +2,7 @@
 title: "通过数据库进行机器学习"
 date: 2023-03-29T09:30:55+08:00
 draft: false
-featured_image: '/images/post-0017.jpg'
+featured_image: '/images/post-0010.jpg'
 summary: 'In-Database Machine learning, 本文在chatGPT辅助下完成'
 ---
 
