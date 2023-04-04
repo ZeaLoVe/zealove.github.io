@@ -114,7 +114,14 @@ summary: 'In-Database Machine learning, 本文在chatGPT辅助下完成'
 - 本地调用是将模型部署在数据库实例的服务器，通过实现插件的方式在数据库执行过程中调用模型的接口。
 - 远程调用是将深度学习模型部署到数据库外的服务器上进行预测，这个过程可以通过Web服务/API的方式来完成。当然，这种方法需要注意一些数据库和Web之间的连接和数据安全等问题。
 
-基于第三方工具的方法，分离开预测和数据库，交给专业的工具解决，但存在处理数据流可能面对的问题，如时延、数据不一致、多套系统的维护成本等
+基于第三方工具的方法，分离开预测和数据库，交给专业的工具解决，但存在处理数据流可能面对的问题，如时延、数据不一致、多套系统的维护成本等。
+
+结合业界实现方案上看，主要分为四种：
+
+1. SQL wrapper，扩展SQL语法，并将其转为对直接调用底层AI引擎的机器学习算法，如SQLFlow
+2. SQL on AI engine, 让AI引擎直接指出SSQL语法及相关的查询优化器，但SQL的执行器使用的依然是AI引擎，如SparkSQL ML 
+3. SQL based AI algorithmn, 基于SQL重写机器学习算法，将算法固化到数据库中，如openGauss、BigQuery ML
+4. UDA based AI algorithmn, 基于数据库的UDA实现机器学习算法，不同的场景可能使用不同的方式，如Python、R、C\C++ 等，这些算法也是内置在数据库中的，如madlib
 
 ## 数据库中机器学习的工具
 
@@ -151,9 +158,17 @@ PS：虽然[Madlib](https://madlib.apache.org/)功能也类似但仅提供机器
 
 本文核心围绕DB4AI，属于比较细分的领域。
 
+## 其他
+
+- NL2SQL 自然语言转换为SQL，使得使用者无需掌握SQL复杂的写法，直接发出业务问题得到答案
+- in-database Inference（基于数据库的内容生成）通过在数据库里保存常用模型仓库的模型调用方法来进行数据库内推理。
+
 ## 参考文档
 
 - [how-do-databases-support-ai-algorithms](https://venturebeat.com/ai/how-do-databases-support-ai-algorithms/)
+- [madlib](https://github.com/apache/madlib)
+- [SQLFlow](https://github.com/sql-machine-learning/sqlflow)
+- [hugging face](https://huggingface.co/)
 - [阿里云数据库走向四化](https://developer.aliyun.com/article/1069748)
 - [ONNX](https://zhuanlan.zhihu.com/p/93213707)
 - [PMML](https://zhuanlan.zhihu.com/p/79197337)
