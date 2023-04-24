@@ -143,7 +143,7 @@ Table orders,colums=[order_id,user_id,product_name,price,order_date]
 - 表字段的含义可以通过注释语句说明
 - SQL特有的UDF也可以通过提示语说明，亦可以加在表结构申明里，但不要用创建函数的语句，而是要说明函数及其用途
 - 方言也可以在提示语里解决，但模型是否支持是前提
-- 目前对于潜台词的理解并不完美，比如关闭时间，其实隐含了从开启到关闭的时间，更准确的说法是持续时间...而且这个用例里有一个隐藏条件，是统计已关闭的
+- 目前对于潜台词的理解并不完美，比如关闭时间，其实隐含了从开启到关闭的时间，更准确的说法是持续时间...而且这个用例里有一个隐藏条件，是统计已关闭的；还比如注释写学分，提示语平均分是无效的，需要写平均学分
 
 ![不带schema](/images/pic/withoutschema.png)
 
@@ -164,3 +164,4 @@ Table orders,colums=[order_id,user_id,product_name,price,order_date]
 - [sqlkiller](https://www.sqlkiller.com/)
 - [Azure OpenAI models](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
 - [Azure OpenAI codex usage](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/work-with-code)
+- [natural-language-to-sql-codex](https://lablab.ai/t/natural-language-to-sql-codex)
