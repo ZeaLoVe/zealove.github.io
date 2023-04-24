@@ -48,15 +48,29 @@ Spider榜单目前的第四名是基于codex实现的（得分78.2），第一�
 
 ### 要素考虑
 
-1. 表结构信息
-2. UDF用户定义函数及其他数据库特有的系统函数
-3. 数据库方言
-4. 模型token问题
-
+- 表结构信息是否可以理解
+- UDF用户定义函数及其他数据库特有的系统函数
+- 数据库方言能否处理
+- 模型token使用量考虑
+- 回答的逻辑是否符合（条件判断是否正确）
+- 语言中的隐含信息是否可以提取
+- 是否支持多表关联查询
+- 是否列出了指定的列
+- 是否按照正确的方式进行排序
+- 是否使用正确的统计函数
 
 ### 用例
 
+用例尽量不要用公共测试集一样的SQL，可能已经被训练过了，会影响最终的评价，最好自己设计或者使用公共数据集但修改一下用例
+
+简单例子可以参考databend里的[ai_to_sql的例子](https://databend.rs/doc/sql-functions/ai-functions/ai-to-sql)
+
+1. 统计年龄大于30岁的美国用户2022年全年期间的订单累计消费金额及订单总数，根据他们的名字排序
+2. （补充）统计所有中国青少年的全部订单数
+
 ### 模型选择
+
+考虑的要素：价格、生成方式（提示语）、响应时间、生成的质量。
 
 gpt-35-turbo、text-davinci-003、code-davinci-002、GPT-4 从目前看都具备不错的效果，但这些模型的使用成本是不同的，而且模型本身有专注于不同的任务。
 
@@ -95,7 +109,38 @@ please respond with "The database does not contain the table data you are lookin
 user_prompt = f'Please answer me briefly with SQL code, just sql content: {prompt}'
 ```
 
+关于表结构的定义方式目前测试的两类都满足，一种是直接按照建表语句:
+```
+CREATE TABLE users(
+    id INT,
+    name VARCHAR,
+    age INT,
+    country VARCHAR
+);
+CREATE TABLE orders(
+    order_id INT,
+    user_id INT,
+    product_name VARCHAR,
+    price DECIMAL(10,2),
+    order_date DATE
+);
+```
+
+另一种是用另一种形式化的表达方式如:
+```
+Table users,colums=[id,name,age,country]
+Table orders,colums=[order_id,user_id,product_name,price,order_date]
+```
+
 ### 基于某开源项目进行效果实测
+
+## 一些测试结论
+
+- 提示语对SQL生成的精确度有直接影响，模型的质量也很重要
+- 表字段的含义可以通过注释语句说明
+- SQL特有的UDF也可以通过提示语说明，亦可以加在表结构申明里，但不要用创建函数的语句，而是要说明函数及其用途
+- 方言也可以在提示语里解决，但模型是否支持是前提
+- 目前对于潜台词的理解并不完美，比如关闭时间，其实隐含了从开启到关闭的时间，更准确的说法是持续时间...而且这个用例里有一个隐藏条件，是统计已关闭的
 
 ## 后续工作
 
