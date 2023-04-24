@@ -132,9 +132,11 @@ Table users,colums=[id,name,age,country]
 Table orders,colums=[order_id,user_id,product_name,price,order_date]
 ```
 
-### 基于某开源项目进行效果实测
+## 基于某开源项目进行效果实测
 
-## 一些测试结论
+主要通过sqltranslate跑，sqlkiller 看起来挺不错的，但没开源也就没去测试了。
+
+### 一些测试结论
 
 - 提示语对SQL生成的精确度有直接影响，模型的质量也很重要
 - 表字段的含义可以通过注释语句说明
@@ -145,6 +147,8 @@ Table orders,colums=[order_id,user_id,product_name,price,order_date]
 ## 后续工作
 
 如何评估方案的效果、评估标准及工具设计。（基于开源的NL2SQL基准测试集，设计效果评测方法及脚本工具。如Spider、SParC等）
+
+对用户进行如何更好的编写提示语的培训，双向奔赴，完善写SQL的效果。
 
 ## 参考资料
 
