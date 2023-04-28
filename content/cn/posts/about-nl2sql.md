@@ -135,7 +135,7 @@ Table orders,colums=[order_id,user_id,product_name,price,order_date]
 
 ## 基于某开源项目进行效果实测
 
-主要通过sqltranslate跑; sqlkiller 看起来挺不错的，但没开源也就没去测试了; sqlchat提供了一种对话式的交互方式。
+主要通过sqltranslate跑; sqlkiller 看起来挺不错的，但没开源也就没去测试了; sqlchat提供了一种对话式的交互方式，使用的也是gpt-3.5-turbo模型，同时支持生成的SQL执行并返回结果。
 
 ### 一些测试结论
 
