@@ -2,8 +2,5 @@
 public/
 resources/_gen/
 
-# Game build outputs (these should be built during CI, not committed)
-games/
-
 # OS files
 .DS_Store
