@@ -1,0 +1,32 @@
+[games_title]
+other = "My Games"
+
+[games_view_all]
+other = "View All Games →"
+
+[games_page_title]
+other = "Game Center"
+
+[games_page_subtitle]
+other = "Click a card to start playing"
+
+[game_play]
+other = "Play Now →"
+
+[game_name_card-game]
+other = "Card Match"
+
+[game_desc_card-game]
+other = "3-layer card puzzle game, 60-second challenge"
+
+[game_name_iron-bloom]
+other = "Iron Bloom"
+
+[game_desc_iron-bloom]
+other = "Swipe to launch iron balls and watch them bloom in the night sky"
+
+[game_name_poker-crush]
+other = "Poker Crush"
+
+[game_desc_poker-crush]
+other = "Strategic card removal puzzle, build the best poker hand from 20 cards"

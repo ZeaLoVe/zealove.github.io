@@ -1,0 +1,35 @@
+{{/*
+  首页游戏入口区域
+  显示所有游戏图标，点击进入 /games/ 卡片页
+*/}}
+{{ $games := index .Site.Data.games "games" }}
+{{ $gamesPath := .Site.Params.gamesPath | default "/games/" }}
+
+{{ if $games }}
+<section class="game-section pv4 ph3 ph5-l" style="background: #0f0f23;">
+  <div class="tc">
+    <h2 class="f3 fw4 white mb3">
+      🎮 <span>{{ i18n "games_title" | default "我的游戏" }}</span>
+    </h2>
+
+    {{/* 游戏图标入口 */}}
+    <div class="flex justify-center flex-wrap gap-4 mb4">
+      {{ range $games }}
+        <a href="{{ .url }}" class="game-icon-link db pa3 br2 tc" style="width: 100px; background: #1a1a2e; border: 1px solid #333;">
+          {{ if .icon }}
+            <img src="{{ .icon }}" alt="{{ .name }}" class="db w-24 h-24 mx-auto mb2" style="object-fit: contain;">
+          {{ else }}
+            <div class="f1 mb2">🎮</div>
+          {{ end }}
+          <span class="f6 white">{{ .name_cn }}</span>
+        </a>
+      {{ end }}
+    </div>
+
+    {{/* 查看全部链接 */}}
+    <a href="{{ $gamesPath }}" class="f6 pa2 br3 white dim" style="background: #e94560; text-decoration: none;">
+      {{ i18n "games_view_all" | default "查看全部游戏 →" }}
+    </a>
+  </div>
+</section>
+{{ end }}

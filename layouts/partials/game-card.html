@@ -1,0 +1,30 @@
+{{/*
+  单个游戏卡片
+  游戏数据通过 .game 传入
+*/}}
+{{ $game := .game }}
+<div class="game-card relative w-100 w-50-m w-33-l pa3">
+  <a href="{{ $game.url }}" class="db link dim relative overflow-hidden br2 shadow-4" style="background: #1a1a2e; min-height: 240px;">
+    {{/* 游戏图标/截图 */}}
+    <div class="game-card-image w-100 overflow-hidden" style="height: 160px; background: #16213e;">
+      {{ if $game.screenshot }}
+        <img src="{{ $game.screenshot }}" alt="{{ $game.name }}" class="db w-100 h-100 object-cover" style="object-fit: cover;">
+      {{ else if $game.icon }}
+        <img src="{{ $game.icon }}" alt="{{ $game.name }}" class="db w-100 h-100" style="object-fit: contain; padding: 24px;">
+      {{ else }}
+        <div class="flex items-center justify-center h-100">
+          <span class="f1">🎮</span>
+        </div>
+      {{ end }}
+    </div>
+
+    {{/* 游戏信息 */}}
+    <div class="pa3">
+      <h3 class="f5 fw6 white mb1">{{ i18n "game_name" $game.id | default $game.name }}</h3>
+      <p class="f6 white-70 mb0" style="opacity: 0.7; line-height: 1.4;">
+        {{ i18n (printf "game_desc_%s" $game.id) | default $game.description_cn }}
+      </p>
+      <div class="mt2 f6" style="color: #e94560;">{{ i18n "game_play" | default "开始游戏 →" }}</div>
+    </div>
+  </a>
+</div>

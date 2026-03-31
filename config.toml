@@ -1,7 +1,7 @@
 baseURL = 'https://zealove.github.io/'
 # languageCode = 'en-us'
 title = "ZeaLoVe's Blogs"
-theme = "ananke" 
+theme = "ananke"
 publishDir = "./public"
 DefaultContentLanguage = "zh"
 
@@ -15,7 +15,22 @@ DefaultContentLanguage = "zh"
     weight = 2
     contentDir = "content/en"
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[menu]
+  [[menu.main]]
+    name = "博客"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "Games"
+    url = "/games/"
+    weight = 2
+
 [params]
+  description = "ZeaLoVe's personal blog - sharing thoughts on Cloud Native, Database, Go, and more."
   text_color = ""
   author = ""
   favicon = ""
@@ -24,6 +39,9 @@ DefaultContentLanguage = "zh"
   background_color_class = "bg-black"
   recent_posts_number = 3
   featured_image = "/images/tasada.jpg"
+  # Social meta (SEO)
+  twitter_card = "summary_large_image"
+  # og_image defaults to featured_image if not set per-page
 
 [[params.ananke_socials]]
 name = "twitter"

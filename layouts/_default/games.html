@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{ $games := index .Site.Data.games "games" }}
+{{ if $games }}
+<section class="pa3 pa4-ns w-100 center" style="background: #0f0f23;">
+  <div class="tc mb4">
+    <h1 class="f2 fw4 white">{{ i18n "games_page_title" | default "游戏中心" }}</h1>
+    <p class="f5 white-70">{{ i18n "games_page_subtitle" | default "点击卡片开始游戏" }}</p>
+  </div>
+
+  <div class="flex flex-wrap ma0 pa0" style="max-width: 1200px; margin: 0 auto;">
+    {{ range $games }}
+      {{ partial "game-card.html" (dict "game" . "Site" $.Site) }}
+    {{ end }}
+  </div>
+</section>
+{{ else }}
+<section class="pa3 pa4-ns tc" style="background: #0f0f23;">
+  <p class="white-70">暂无游戏</p>
+</section>
+{{ end }}
+{{ end }}

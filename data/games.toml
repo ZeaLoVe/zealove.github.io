@@ -1,0 +1,26 @@
+[[games]]
+  id = "card-game"
+  name = "Card Match"
+  name_cn = "卡牌翻转"
+  description = "3层卡牌解谜游戏，60秒计时挑战"
+  description_cn = "点击卡牌放入底部槽位，3张相同图案消除得分"
+  url = "/games/card-game/"
+  icon = "/images/games/card-game.svg"
+
+[[games]]
+  id = "iron-bloom"
+  name = "Iron Bloom"
+  name_cn = "铁花绽放"
+  description = "滑动屏幕划线撞击飞起的铁球，让它在夜空中绽放"
+  description_cn = "滑动屏幕划线撞击飞起的铁球，让它在夜空中绽放成绚丽的铁花"
+  url = "/games/iron-bloom/"
+  icon = "/images/games/iron-bloom.svg"
+
+[[games]]
+  id = "poker-crush"
+  name = "Poker Crush"
+  name_cn = "扑克智消"
+  description = "策略卡牌消除游戏，从20张扑克牌中组成最佳牌型"
+  description_cn = "从20张精心设计的扑克牌中依次选择5张牌，组成最佳牌型组合"
+  url = "/games/poker-crush/"
+  icon = "/images/games/poker-crush.svg"

@@ -1,0 +1,45 @@
+{{/*
+  func/style/GetMainCSS.html — Override
+  Workaround for Hugo 0.159+ bug where resources.Concat returns interface{}.
+  Avoids concatenation by loading the theme CSS as a plain asset.
+*/}}
+
+{{/* First try to load pre-built main.min.css from assets */}}
+{{ $style := resources.Get "/ananke/css/main.min.css" }}
+
+{{/* If not found (e.g. first build), fall back to individual css files */}}
+{{ if not $style }}
+  {{ $files := slice "_tachyons.css" "_code.css" "_hugo-internal-templates.css" "_social-icons.css" "_styles.css" }}
+  {{ $first := true }}
+  {{ $content := "" }}
+  {{ range $f := $files }}
+    {{ $r := resources.Get (print "/ananke/css/" $f) }}
+    {{ if $r }}
+      {{ if $first }}
+        {{ $content = $r.Content }}
+        {{ $first = false }}
+      {{ else }}
+        {{ $content = printf "%s\n%s" $content $r.Content }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Generate social icons hover CSS dynamically */}}
+  {{ if site.Params.ananke_socials }}
+    {{ $socialCSS := "" }}
+    {{ range site.Params.ananke_socials }}
+      {{ if and .name .color }}
+        {{ $socialCSS = printf "%s\n.ananke-socials a.%s:hover { color: %s }" $socialCSS .name .color }}
+      {{ end }}
+    {{ end }}
+    {{ if $socialCSS }}
+      {{ $content = printf "%s\n%s" $content $socialCSS }}
+    {{ end }}
+  {{ end }}
+
+  {{ with $content }}
+    {{ $style = . | resources.FromString "ananke/css/main.css" }}
+  {{ end }}
+{{ end }}
+
+{{ return $style }}

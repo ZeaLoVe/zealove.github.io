@@ -1,0 +1,32 @@
+[games_title]
+other = "我的游戏"
+
+[games_view_all]
+other = "查看全部游戏 →"
+
+[games_page_title]
+other = "游戏中心"
+
+[games_page_subtitle]
+other = "点击卡片开始游戏"
+
+[game_play]
+other = "开始游戏 →"
+
+[game_name_card-game]
+other = "卡牌翻转"
+
+[game_desc_card-game]
+other = "3层卡牌解谜游戏，60秒计时挑战"
+
+[game_name_iron-bloom]
+other = "铁花绽放"
+
+[game_desc_iron-bloom]
+other = "滑动屏幕划线撞击飞起的铁球，让它在夜空中绽放"
+
+[game_name_poker-crush]
+other = "扑克智消"
+
+[game_desc_poker-crush]
+other = "策略卡牌消除游戏，从20张扑克牌中组成最佳牌型"
