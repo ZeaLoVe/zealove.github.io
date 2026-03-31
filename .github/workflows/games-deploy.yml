@@ -1,0 +1,32 @@
+name: Games Deploy
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'games/**'
+  workflow_dispatch:
+
+concurrency:
+  group: "games-deploy"
+  cancel-in-progress: true
+
+jobs:
+  deploy-games:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 1
+
+      - name: Push games to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./games
+          destination_dir: games
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
