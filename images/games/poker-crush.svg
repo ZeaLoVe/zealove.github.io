@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="12" fill="#1a1a2e"/>
+  <rect x="20" y="30" width="35" height="50" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="37" y="62" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#e63946">A</text>
+  <text x="12" y="48" font-family="Arial" font-size="10" fill="#e63946">♥</text>
+  <rect x="45" y="25" width="35" height="50" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="62" y="57" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#1d3557">K</text>
+  <text x="37" y="43" font-family="Arial" font-size="10" fill="#1d3557">♠</text>
+  <rect x="70" y="40" width="35" height="50" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="87" y="72" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#e63946">Q</text>
+  <text x="62" y="58" font-family="Arial" font-size="10" fill="#e63946">♦</text>
+</svg>
