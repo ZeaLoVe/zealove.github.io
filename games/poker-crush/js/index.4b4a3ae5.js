@@ -1,0 +1,1 @@
+import{a0 as o,v as e,j as a,V as t,f as r}from"./vendors.237d80ea.js";var l=function(){var s=o(),n=s.t;return e.useLoad(function(){console.log("Index page loaded"),e.redirectTo({url:"/pages/splash/index"})}),a.jsx(t,{className:"index-page",children:a.jsx(r,{className:"loading-text",children:n("common.redirecting")})})};export{l as default};
