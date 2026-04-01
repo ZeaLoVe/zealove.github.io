@@ -58,6 +58,19 @@ for game in "${GAMES[@]}"; do
   echo "<<< $game 发布完成"
 done
 
+# Hugo 生成 games listing page（同步 public/games/index.html 到 git games/ 目录）
+echo ""
+echo ">>> 同步 Hugo 生成的 games listing page..."
+# 先运行 Hugo 生成 public/（包括 public/games/index.html）
+echo "    运行 Hugo 构建..."
+cd "$REPO_DIR" && hugo --gc --minify
+# 把 Hugo 生成的 games/index.html 和 index.xml 同步到 git games/ 目录
+if [[ -f "$PUBLIC_GAMES_DIR/index.html" ]]; then
+  cp "$PUBLIC_GAMES_DIR/index.html" "$GAMES_DIR/index.html"
+  cp "$PUBLIC_GAMES_DIR/index.xml" "$GAMES_DIR/index.xml" 2>/dev/null || true
+  echo "    已同步 games/index.html 和 index.xml 到 git games/ 目录"
+fi
+
 echo ""
 echo "=== 所有游戏发布完成 ==="
 
