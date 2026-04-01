@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Card Match - 3-Layer Puzzle Game</title>
+  <script type="module" crossorigin src="./assets/main-CwlndG96.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Ddfp9CET.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="score-row">
+        <div class="score-box">🏆 <span id="score">0</span></div>
+        <div class="shuffle-count"><span class="shuffle-icon">🔄</span> x<span id="shuffleCount">2</span></div>
+        <button class="btn btn-lang" id="btnLang" title="切换语言">🌐 EN</button>
+      </div>
+      <div class="status-bar">
+        <div class="status-item">
+          <span class="status-icon">🔥</span>
+          <span class="status-value" id="statusCombo">0</span>
+          <span class="status-label">Combo</span>
+        </div>
+        <div class="status-item">
+          <span class="status-icon">📦</span>
+          <span class="status-value" id="statusSlot">5</span>
+          <span class="status-label">Slots</span>
+        </div>
+        <div class="status-item">
+          <span class="status-icon">🍎</span>
+          <span class="status-value" id="statusRemaining">72</span>
+          <span class="status-label">Left</span>
+        </div>
+        <div class="status-item">
+          <span class="status-icon">⏱️</span>
+          <span class="status-value" id="statusTime">0:00</span>
+          <span class="status-label">Time</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Combo Timer -->
+    <div class="combo-timer" id="comboTimer">🔥 <span id="comboCount">0</span> | <span id="timerValue">3.0</span>s</div>
+
+    <!-- Game Board -->
+    <div class="game-board" id="gameBoard"></div>
+
+    <!-- Slot Area -->
+    <div class="slot-area">
+      <div class="slots" id="slots">
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-shuffle" id="btnShuffle">🔄 Shuffle</button>
+      <button class="btn btn-add-shuffle" id="btnAddShuffle">➕ Shuffle</button>
+      <button class="btn btn-add-slot" id="btnAddSlot">📦 Slot</button>
+      <button class="btn btn-rank" id="btnRank">📊 Rank</button>
+      <button class="btn btn-restart" id="btnRestart">🔄 Restart</button>
+    </div>
+  </div>
+
+  <!-- Game Over Modal -->
+  <div class="overlay" id="gameOverOverlay">
+    <div class="modal">
+      <h2 id="gameOverTitle">🎉 Victory!</h2>
+      <p id="finalScoreLabel">Final Score</p>
+      <div class="final-score" id="finalScore">0</div>
+      <button class="btn btn-restart" id="modalRestart">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Leaderboard Modal -->
+  <div class="overlay" id="leaderboardOverlay">
+    <div class="modal">
+      <h2 id="leaderboardTitle">📊 Leaderboard</h2>
+      <div class="leaderboard-list" id="leaderboardList"></div>
+      <button class="btn btn-rank" id="closeLeaderboard">Close</button>
+    </div>
+  </div>
+
+</body>
+</html>
