@@ -28,6 +28,10 @@ DefaultContentLanguage = "zh"
     name = "Games"
     url = "/games/"
     weight = 2
+  [[menu.main]]
+    name = "每日图像"
+    url = "/daily-image/"
+    weight = 3
 
 [params]
   description = "ZeaLoVe's personal blog - sharing thoughts on Cloud Native, Database, Go, and more."

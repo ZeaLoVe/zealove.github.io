@@ -1,0 +1,11 @@
+<figure class="daily-image">
+  {{ $alt := .Get "alt" }}
+  {{ if not $alt }}{{ $alt = .Get "title" }}{{ end }}
+  {{ $format := .Get "format" }}
+  {{ if not $format }}{{ $format = "jpg" }}{{ end }}
+  <img src="/images/daily/{{ .Date.Format "2006-01-02" }}.{{ $format }}" alt="{{ $alt }}" loading="lazy" />
+  <figcaption>
+    <span class="daily-title">{{ .Get "title" }}</span>
+    <span class="daily-caption">{{ .Get "caption" }}</span>
+  </figcaption>
+</figure>

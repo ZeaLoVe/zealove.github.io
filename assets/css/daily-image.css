@@ -1,0 +1,28 @@
+figure.daily-image {
+  display: block;
+  margin: 16px 0;
+  max-width: 100%;
+}
+
+figure.daily-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+figure.daily-image figcaption {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+}
+
+figure.daily-image .daily-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: inherit;
+}
+
+figure.daily-image .daily-caption {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}

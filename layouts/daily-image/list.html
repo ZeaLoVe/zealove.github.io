@@ -1,0 +1,89 @@
+{{ define "main" }}
+{{ $css := resources.Get "css/daily-image.css" }}
+<style>{{ $css.Content }}</style>
+
+<section class="daily-image-archive">
+  <h1>每日图像专题</h1>
+
+  {{ range .Pages.GroupByDate "2006年1月" "desc" }}
+    <div class="di-month-group">
+      <h2>{{ .Key }}</h2>
+      <div class="di-grid">
+        {{ range .Pages }}
+          <article class="di-item">
+            {{ $format := .Params.format }}
+            {{ if not $format }}{{ $format = "jpg" }}{{ end }}
+            <img
+              src="/images/daily/{{ .Date.Format "2006-01-02" }}.{{ $format }}"
+              alt="{{ .Title }}"
+              loading="lazy"
+            />
+            <div class="di-item-meta">
+              <span class="di-date">{{ .Date.Format "2006-01-02" }}</span>
+              <span class="di-title">{{ .Title }}</span>
+              {{ with .Params.caption }}<span class="di-caption">{{ . }}</span>{{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</section>
+
+<style>
+.daily-image-archive {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.daily-image-archive h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.di-month-group {
+  margin-bottom: 2rem;
+}
+.di-month-group h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+.di-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.di-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.di-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.di-item-meta {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.di-date {
+  font-size: 12px;
+  color: #999;
+}
+.di-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+.di-caption {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+</style>
+{{ end }}
