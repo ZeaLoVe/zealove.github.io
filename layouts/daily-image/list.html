@@ -14,7 +14,7 @@
             {{ $format := .Params.format }}
             {{ if not $format }}{{ $format = "jpg" }}{{ end }}
             <img
-              src="/images/daily/{{ .Date.Format "2006-01-02" }}.{{ $format }}"
+              src="/image/daily/{{ .Date.Format "2006-01-02" }}.{{ $format }}"
               alt="{{ .Title }}"
               loading="lazy"
             />

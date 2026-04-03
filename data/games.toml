@@ -24,3 +24,12 @@
   description_cn = "从20张精心设计的扑克牌中依次选择5张牌，组成最佳牌型组合"
   url = "/games/poker-crush/"
   icon = "/images/games/poker-crush.svg"
+
+[[games]]
+  id = "fruits-match"
+  name = "Fruits Match"
+  name_cn = "水果连连看"
+  description = "经典水果连连看益智游戏，连接相同水果消除得分"
+  description_cn = "经典水果连连看益智游戏，连接相同水果消除得分，考验眼力和速度"
+  url = "/games/fruits-match/"
+  icon = "/images/games/fruits-match.svg"
