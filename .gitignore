@@ -4,3 +4,6 @@ resources/_gen/
 
 # OS files
 .DS_Store
+
+# Local scripts (maintained locally only)
+scripts/
