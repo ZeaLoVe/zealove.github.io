@@ -33,3 +33,12 @@
   description_cn = "经典水果连连看益智游戏，连接相同水果消除得分，考验眼力和速度"
   url = "/games/fruits-match/"
   icon = "/images/games/fruits-match.svg"
+
+[[games]]
+  id = "starforce-defense"
+  name = "StarFort Defense"
+  name_cn = "星垒防线"
+  description = "融合方块堆叠构建与塔防抵御的休闲小游戏"
+  description_cn = "融合方块堆叠构建与塔防抵御的休闲小游戏，点击格子放置方块，右键旋转，抵御敌人进攻"
+  url = "/games/starforce-defense/"
+  icon = "/images/games/starforce-defense.png"
