@@ -1,0 +1,4 @@
+1:"$Sreact.fragment"
+2:I[55385,["/games/starforce-defense/_next/static/chunks/150490f7c7474667.js"],"default"]
+3:I[48211,["/games/starforce-defense/_next/static/chunks/150490f7c7474667.js"],"default"]
+0:{"buildId":"TFVy2sSImX8vHFMa12kUe","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
