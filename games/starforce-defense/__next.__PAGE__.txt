@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[96723,["/games/starforce-defense/_next/static/chunks/8afd7113f8b5f03d.js","/games/starforce-defense/_next/static/chunks/3824315010a51c0e.js"],"default"]
+2:I[96723,["/games/starforce-defense/_next/static/chunks/8afd7113f8b5f03d.js","/games/starforce-defense/_next/static/chunks/e90922eee6fd4368.js"],"default"]
 3:I[17859,["/games/starforce-defense/_next/static/chunks/150490f7c7474667.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"Mbe-cHKU3JLyL1p51vUnl","rsc":["$","$1","c",{"children":[["$","$L2",null,{"data-inspector-line":"27","data-inspector-column":"9","data-inspector-relative-path":"src/app/page.tsx"}],[["$","script","script-0",{"src":"/games/starforce-defense/_next/static/chunks/3824315010a51c0e.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"TFVy2sSImX8vHFMa12kUe","rsc":["$","$1","c",{"children":[["$","$L2",null,{"data-inspector-line":"27","data-inspector-column":"9","data-inspector-relative-path":"src/app/page.tsx"}],[["$","script","script-0",{"src":"/games/starforce-defense/_next/static/chunks/e90922eee6fd4368.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
