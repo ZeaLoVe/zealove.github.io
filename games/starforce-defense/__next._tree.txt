@@ -1,2 +1,2 @@
-:HL["/games/starforce-defense/_next/static/chunks/3cc6dab80f8c519f.css","style"]
-0:{"buildId":"TFVy2sSImX8vHFMa12kUe","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+:HL["/games/starforce-defense/_next/static/chunks/1f99f38971dbd4f0.css","style"]
+0:{"buildId":"Mbe-cHKU3JLyL1p51vUnl","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
