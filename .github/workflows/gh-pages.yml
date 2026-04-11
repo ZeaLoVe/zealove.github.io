@@ -4,6 +4,15 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'content/**'
+      - 'layouts/**'
+      - 'config.toml'
+      - 'config.yaml'
+      - 'config.yml'
+      - 'themes/**'
+      - 'data/**'
+      - 'archetypes/**'
   pull_request:
   workflow_dispatch:
 
