@@ -13,6 +13,8 @@ on:
       - 'themes/**'
       - 'data/**'
       - 'archetypes/**'
+    paths-ignore:
+      - 'static/**'
   pull_request:
   workflow_dispatch:
 
