@@ -13,6 +13,9 @@ on:
       - 'themes/**'
       - 'data/**'
       - 'archetypes/**'
+  push:
+    branches:
+      - master
     paths-ignore:
       - 'static/**'
   pull_request:
