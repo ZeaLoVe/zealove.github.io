@@ -4,20 +4,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'content/**'
-      - 'layouts/**'
-      - 'config.toml'
-      - 'config.yaml'
-      - 'config.yml'
-      - 'themes/**'
-      - 'data/**'
-      - 'archetypes/**'
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - 'static/**'
   pull_request:
   workflow_dispatch:
 
@@ -47,13 +33,28 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Detect static-only changes
+        id: changed
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -v '^static/' | grep -v '^public/')
+          if [ -z "$CHANGED" ]; then
+            echo "Only static/ changed, skipping Hugo build"
+            echo "skip_build=true" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected: $CHANGED"
+            echo "skip_build=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build
+        if: steps.changed.outputs.skip_build != 'true'
         run: hugo --gc --minify
 
       - name: Upload Pages artifact
+        if: steps.changed.outputs.skip_build != 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
       - name: Deploy to GitHub Pages
+        if: steps.changed.outputs.skip_build != 'true'
         uses: actions/deploy-pages@v4
