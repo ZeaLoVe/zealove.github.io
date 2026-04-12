@@ -27,10 +27,10 @@
 
 [[games]]
   id = "fruits-match"
-  name = "Fruits Match"
-  name_cn = "水果连连看"
-  description = "经典水果连连看益智游戏，连接相同水果消除得分"
-  description_cn = "经典水果连连看益智游戏，连接相同水果消除得分，考验眼力和速度"
+  name = "Fruits Stack"
+  name_cn = "水果牌堆三重消"
+  description = "点击卡牌放入底部槽位，三张相同水果图案自动消除得分"
+  description_cn = "点击卡牌放入底部槽位，三张相同水果图案自动消除得分，60秒限时挑战"
   url = "/games/fruits-match/"
   icon = "/images/games/fruits-match.svg"
 
