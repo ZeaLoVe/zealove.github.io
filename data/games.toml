@@ -32,7 +32,7 @@
   description = "点击卡牌放入底部槽位，三张相同水果图案自动消除得分"
   description_cn = "点击卡牌放入底部槽位，三张相同水果图案自动消除得分，60秒限时挑战"
   url = "/games/fruits-match/"
-  icon = "/images/games/fruits-match.svg"
+  icon = "/images/games/fruits-match.png"
 
 [[games]]
   id = "starforce-defense"
