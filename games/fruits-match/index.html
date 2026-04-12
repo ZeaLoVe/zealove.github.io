@@ -1,51 +1,103 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh">
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-touch-fullscreen" content="yes">
-  <meta name="format-detection" content="telephone=no,address=no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="white">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>水果连连看</title>
-  <script>!function(n){function f(){var e=n.document.documentElement,r=e.getBoundingClientRect(),width=r.width,height=r.height,arr=[width,height].filter(function(value){return Boolean(value)}),w=Math.min.apply(Math,arr),x=40*w/750;e.style.fontSize=x>=40?"40px":x<=20?"20px":x+"px"}; n.addEventListener("resize",(function(){f()})),f()}(window);</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>水果连连看 - Fruits Match</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   
-  <script type="module" crossorigin src="./js/app.fa49cb0b.js"></script>
-  <link rel="modulepreload" crossorigin href="./js/vendors.597fa6e5.js">
-  <link rel="stylesheet" href="./css/vendors.8886af03.css">
-  <link rel="stylesheet" href="./css/index.bc87d85e.css">
+  <script type="module" crossorigin src="./assets/main-f3a2ad9d.js"></script>
+  <link rel="stylesheet" href="./assets/index-7a6068c6.css">
 </head>
-
 <body>
-  <div id="app">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="
-        position: fixed;
-        inset: 0;
-        margin: auto;
-        width: 24px;
-        height: 24px;
-        animation: __app-loading-spin 1s linear infinite;
-      ">
-      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-    </svg>
-    <style>
-      @-webkit-keyframes __app-loading-spin {
-        to {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
-        }
-      }
-@keyframes __app-loading-spin {
-        to {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
-        }
-      }
-    </style>
-  </div>
-</body>
+  <div id="app" class="h-full bg-gradient-to-b from-purple-100 to-pink-100 flex flex-col max-w-[760px] mx-auto overflow-hidden">
+    <!-- 顶部信息栏 -->
+    <div class="grid grid-cols-4 gap-x-4 px-3 py-2 bg-white bg-opacity-90 mx-1 mt-1 shadow-sm rounded-lg">
+      <div class="flex items-center gap-1">
+        <span class="text-gray-500 text-xs" data-i18n="game.score">得分</span>
+        <span class="font-bold text-yellow-500 text-sm" id="score">0</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <span class="text-gray-500 text-xs" data-i18n="game.time">用时</span>
+        <span class="font-bold text-blue-500 text-sm" id="gameTime">00:00</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <span class="text-gray-500 text-xs" data-i18n="game.progress">进度</span>
+        <span class="font-bold text-green-500 text-sm" id="progress">0/108</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <span class="text-gray-500 text-xs" data-i18n="game.combo">连击</span>
+        <span class="font-bold text-sm" id="combo">x0</span>
+      </div>
+    </div>
 
+    <!-- 槽位区 (放在卡片区上方，视觉在上) -->
+    <div class="px-3 py-2 bg-white bg-opacity-60 flex flex-col items-center gap-1">
+      <div class="flex gap-2 justify-center items-center" id="slots">
+        <div class="slot" data-slot="0"></div>
+        <div class="slot" data-slot="1"></div>
+        <div class="slot" data-slot="2"></div>
+        <div class="slot" data-slot="3"></div>
+        <div class="slot" data-slot="4"></div>
+      </div>
+    </div>
+
+    <!-- 卡片区 -->
+    <div class="flex-1 flex flex-col justify-center items-center px-2 py-2 overflow-hidden min-h-0">
+      <div id="gameBoard" class="grid grid-cols-6 gap-2 w-full">
+        <!-- 6x6 grid cells will be generated here -->
+      </div>
+    </div>
+
+    <!-- 功能按钮区 -->
+    <div class="flex justify-center gap-3 px-3 py-2 pb-2 bg-white bg-opacity-80">
+      <button id="btnShuffle" data-i18n="game.shuffle" class="px-3 py-2 rounded-lg shadow-sm text-xs font-semibold text-white bg-blue-500 active:scale-95 transition-transform">
+        洗牌
+      </button>
+      <button id="btnAddShuffle" data-i18n="game.addShuffle" class="px-3 py-2 rounded-lg shadow-sm text-xs font-semibold text-white bg-green-500 active:scale-95 transition-transform">
+        增加洗牌
+      </button>
+      <button id="btnLeaderboard" data-i18n="game.leaderboard" class="px-3 py-2 rounded-lg shadow-sm text-xs font-semibold text-white bg-purple-500 active:scale-95 transition-transform">
+        排行榜
+      </button>
+      <button id="btnRestart" data-i18n="game.restart" class="px-3 py-2 rounded-lg shadow-sm text-xs font-semibold text-white bg-orange-500 active:scale-95 transition-transform">
+        重新开始
+      </button>
+    </div>
+
+    <!-- 槽位剩余提示 -->
+    <div class="text-center pb-1">
+      <span class="text-xs text-gray-400" id="shuffleHint">
+        <span id="shuffleCount">2</span> <span data-i18n="game.timesLeft">次洗牌机会</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 游戏结束弹窗 -->
+  <div class="overlay" id="gameOverOverlay">
+    <div class="modal">
+      <div id="gameOverContent"></div>
+    </div>
+  </div>
+
+  <!-- 排行榜弹窗 -->
+  <div class="overlay" id="leaderboardOverlay">
+    <div class="modal">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold text-gray-800" id="leaderboardTitle">🏆 <span data-i18n="leaderboard.title">排行榜</span></h2>
+        <button id="closeLeaderboard" class="text-gray-500 text-sm px-2 py-1">✕</button>
+      </div>
+      <div id="leaderboardList" class="max-h-[50vh] overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <!-- 飘字动画容器 -->
+  <div id="floatingContainer"></div>
+
+  
+  
+  
+  
+</body>
 </html>
