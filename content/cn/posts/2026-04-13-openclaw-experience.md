@@ -4,6 +4,7 @@ date: 2026-04-13
 slug: openclaw-experience
 categories: ["效率工具"]
 tags: ["OpenClaw", "AI助手", "Agent", "自动化", "工作流"]
+featured_image: '/image/2026-04-13-openclaw-experience.png'
 ---
 
 ![OpenClaw 使用场景](https://zealove.github.io/image/2026-04-13-openclaw-experience.png)
