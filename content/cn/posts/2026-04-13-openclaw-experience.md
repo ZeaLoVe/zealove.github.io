@@ -7,8 +7,6 @@ tags: ["OpenClaw", "AI助手", "Agent", "自动化", "工作流"]
 featured_image: '/image/2026-04-13-openclaw-experience.png'
 ---
 
-![OpenClaw 使用场景](https://zealove.github.io/image/2026-04-13-openclaw-experience.png)
-
 OpenClaw 是支持接入即时通讯软件的 AI Agent。和普通对话机器人的区别是：它不只是回答问题，它能读文件、写文件、执行脚本、配置定时任务、推送消息——基本上我平时在终端里做的那些事，它都能替我跑。
 
 我用了一个多月。搭了几个自动化流程，踩了很多坑。这篇文章不说功能介绍，不说行业对比，就说一件事：用下来我真正相信了什么东西，以及我原来的哪些想法被改变了。
