@@ -41,7 +41,7 @@ for game in "${GAMES[@]}"; do
 
   # 构建
   echo "    构建..."
-  eval "${BUILD_CMDS[$game]}"
+  "${BUILD_CMDS[$game]}"
 
   # 清空目标目录（仓库根 games/ 和 public/games/）
   rm -rf "$GAMES_DIR/$game"
