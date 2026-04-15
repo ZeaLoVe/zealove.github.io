@@ -2,3 +2,11 @@ pre,
 .pre {
   overflow: auto;
 }
+
+/* 修复移动端页面底部大片白空
+   pb7=padding-bottom:16rem 在桌面端合理，在手机上过大 */
+@media screen and (max-width: 60em) {
+  main.pb7 {
+    padding-bottom: 2rem;
+  }
+}
