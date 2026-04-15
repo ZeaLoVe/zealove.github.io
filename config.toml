@@ -29,9 +29,13 @@ DefaultContentLanguage = "zh"
     url = "/games/"
     weight = 2
   [[menu.main]]
+    name = "我的收藏"
+    url = "/favorites/"
+    weight = 3
+  [[menu.main]]
     name = "每日图像"
     url = "/daily-image/"
-    weight = 3
+    weight = 4
 
 [params]
   description = "ZeaLoVe's personal blog - sharing thoughts on Cloud Native, Database, Go, and more."

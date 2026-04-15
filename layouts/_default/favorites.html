@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ $categories := index .Site.Data.favorites "categories" }}
+{{ $items := index .Site.Data.favorites "items" }}
+
+{{/* 按 order 排序分类 */}}
+{{ $sortedCategories := slice }}
+{{ range $key, $value := $categories }}
+  {{ $sortedCategories = $sortedCategories | append (merge $value (dict "key" $key)) }}
+{{ end }}
+{{ $sortedCategories = sort $sortedCategories "order" "asc" }}
+
+<section class="pa3 pa4-ns w-100 center" style="background: #0f0f23; min-height: 100vh;">
+  <div class="tc mb5 pt4">
+    <h1 class="f2 fw4 white">我的收藏</h1>
+    <p class="f5 white-70 mt2">常用工具网站整理</p>
+  </div>
+
+  {{ range $sortedCategories }}
+    {{ $categoryKey := .key }}
+    {{ $categoryName := .name }}
+    {{ $categoryIcon := .icon }}
+    {{ $categoryDesc := .description }}
+
+    {{/* 过滤出属于当前分类的 items */}}
+    {{ $categoryItems := where $items "category" $categoryKey }}
+
+    {{ if $categoryItems }}
+    <div class="mb5" style="max-width: 1200px; margin: 0 auto;">
+      {{/* 分类标题 */}}
+      <div class="flex items-center mb4">
+        <span class="f1 mr3">{{ $categoryIcon }}</span>
+        <div>
+          <h2 class="f3 fw4 white mb0">{{ $categoryName }}</h2>
+          <p class="f6 white-50 mb0">{{ $categoryDesc }}</p>
+        </div>
+      </div>
+
+      {{/* 卡片网格 */}}
+      <div class="flex flex-wrap ma0 pa0">
+        {{ range $categoryItems }}
+          {{ partial "favorite-card.html" (dict "item" . "Site" $.Site) }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+</section>
+{{ end }}

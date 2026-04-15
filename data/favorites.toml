@@ -1,0 +1,167 @@
+# 我的收藏 - 数据文件
+# 缩略图：使用 Google Favicon API (https://www.google.com/s2/favicons?domain=&sz=128)
+
+[categories.development]
+name = "开发工具"
+icon = "🔧"
+description = "日常开发常用的在线工具"
+order = 1
+
+[categories.knowledge]
+name = "知识搜索"
+icon = "📚"
+description = "知识查询与学习资源"
+order = 2
+
+[categories.tools]
+name = "实用工具"
+icon = "🛠️"
+description = "效率工具与在线服务"
+order = 3
+
+[[items]]
+name = "Excalidraw"
+url = "https://excalidraw.com/"
+description = "手绘风格白板工具，支持图表、流程图"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=excalidraw.com&sz=128"
+
+[[items]]
+name = "draw.io"
+url = "https://app.diagrams.net/"
+description = "免费在线图表工具，流程图、架构图、UML"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=diagrams.net&sz=128"
+
+[[items]]
+name = "Carbon"
+url = "https://carbon.vercel.app/"
+description = "代码截图生成精美图片，支持多语言高亮"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=vercel.app&sz=128"
+
+[[items]]
+name = "Stack Overflow"
+url = "https://stackoverflow.com/"
+description = "全球最大开发者问答社区"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=stackoverflow.com&sz=128"
+
+[[items]]
+name = "pkg.go.dev"
+url = "https://pkg.go.dev/"
+description = "Go 语言官方包文档查询"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=go.dev&sz=128"
+
+[[items]]
+name = "Awesome Go"
+url = "https://awesome-go.com/"
+description = "精选 Go 语言生态资源列表"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=awesome-go.com&sz=128"
+
+[[items]]
+name = "Playwright"
+url = "https://playwright.dev/"
+description = "微软开源 E2E 测试框架，支持多浏览器"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=playwright.dev&sz=128"
+
+[[items]]
+name = "Go Regex Tester"
+url = "https://regoio.herokuapp.com/"
+description = "Go 语言正则表达式在线测试"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=herokuapp.com&sz=128"
+
+[[items]]
+name = "bejson"
+url = "https://www.bejson.com/validators/yaml_editor/"
+description = "JSON/YAML 格式互转、验证、格式化"
+category = "development"
+favicon = "https://www.google.com/s2/favicons?domain=bejson.com&sz=128"
+
+[[items]]
+name = "Z-library"
+url = "https://z-library.sk/"
+description = "全球最大免费电子书库，涵盖各领域书籍"
+category = "knowledge"
+favicon = "https://www.google.com/s2/favicons?domain=z-library.sk&sz=128"
+
+[[items]]
+name = "国家法律法规数据库"
+url = "https://flk.npc.gov.cn/"
+description = "中国人大法规库，收录国家法律法规"
+category = "knowledge"
+favicon = "https://www.google.com/s2/favicons?domain=npca.gov.cn&sz=128"
+
+[[items]]
+name = "百度脑图"
+url = "https://naotu.baidu.com/"
+description = "免费在线思维导图工具"
+category = "knowledge"
+favicon = "https://www.google.com/s2/favicons?domain=baidu.com&sz=128"
+
+[[items]]
+name = "199IT 大数据导航"
+url = "http://hao.199it.com/"
+description = "数据行业工具导航，聚合数据平台入口"
+category = "knowledge"
+favicon = "https://www.google.com/s2/favicons?domain=199it.com&sz=128"
+
+[[items]]
+name = "DB-Engines"
+url = "https://db-engines.com/en/ranking"
+description = "数据库引擎排名，追踪各数据库流行度趋势"
+category = "knowledge"
+favicon = "https://www.google.com/s2/favicons?domain=db-engines.com&sz=128"
+
+[[items]]
+name = "123apps"
+url = "https://123apps.com/"
+description = "免费在线工具集：PDF、视频、音频处理等"
+category = "tools"
+favicon = "https://www.google.com/s2/favicons?domain=123apps.com&sz=128"
+
+[[items]]
+name = "TinyWow"
+url = "https://tinywow.com/"
+description = "免费在线文件处理工具：PDF、图像、视频、写作"
+category = "tools"
+favicon = "https://www.google.com/s2/favicons?domain=tinywow.com&sz=128"
+
+[[items]]
+name = "ProcessOn"
+url = "https://www.processon.com/"
+description = "免费在线作图平台，支持流程图、思维导图"
+category = "tools"
+favicon = "https://www.google.com/s2/favicons?domain=processon.com&sz=128"
+
+[[items]]
+name = "Wolfram Alpha"
+url = "https://www.wolframalpha.com/"
+description = "计算知识引擎，数学、技术、地理等问答"
+category = "tools"
+favicon = "https://www.google.com/s2/favicons?domain=wolframalpha.com&sz=128"
+
+[[items]]
+name = "chinaz 时间戳"
+url = "http://tool.chinaz.com/Tools/unixtime.aspx"
+description = "Unix 时间戳与北京时间互转"
+category = "tools"
+favicon = "https://www.google.com/s2/favicons?domain=chinaz.com&sz=128"
+
+[[items]]
+name = "Text Compare"
+url = "https://text-compare.com/"
+description = "文本差异对比工具，支持多种格式"
+category = "tools"
+favicon = "https://www.google.com/s2/favicons?domain=text-compare.com&sz=128"
+
+[[items]]
+name = "chinaz Diff"
+url = "http://tool.chinaz.com/tools/diff/"
+description = "在线文本差异检查工具"
+category = "tools"
+favicon = "https://www.google.com/s2/favicons?domain=chinaz.com&sz=128"
