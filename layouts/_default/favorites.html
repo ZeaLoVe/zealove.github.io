@@ -10,10 +10,6 @@
 {{ $sortedCategories = sort $sortedCategories "order" "asc" }}
 
 <section class="pa3 pa4-ns w-100 center" style="background: #0f0f23; min-height: 100vh;">
-  <div class="tc mb5 pt4">
-    <h1 class="f2 fw4 white">我的收藏</h1>
-    <p class="f5 white-70 mt2">常用工具网站整理</p>
-  </div>
 
   {{ range $sortedCategories }}
     {{ $categoryKey := .key }}

@@ -4,14 +4,12 @@
 */}}
 {{ $item := .item }}
 <div class="favorite-card relative w-100 w-50-m w-33-l pa3">
-  <a href="{{ $item.url }}" target="_blank" rel="noopener noreferrer" 
-     class="db link dim relative overflow-hidden br2 shadow-4" 
+  <a href="{{ $item.url }}" target="_blank" rel="noopener noreferrer"
+     class="db link dim relative overflow-hidden br2 shadow-4"
      style="background: #1a1a2e; min-height: 180px; text-decoration: none; transition: transform 0.2s ease;">
     {{/* 缩略图区域 */}}
     <div class="favorite-card-image w-100 flex items-center justify-center" style="height: 100px; background: #16213e;">
-      <img src="{{ $item.favicon }}" alt="{{ $item.name }}" 
-           class="db" style="width: 48px; height: 48px; object-fit: contain;"
-           onerror="this.style.display='none'">
+      <img src="{{ $item.thumbnail }}" alt="{{ $item.name }}" class="db" style="width: 64px; height: 64px; object-fit: contain; border-radius: 8px;">
     </div>
 
     {{/* 工具信息 */}}
