@@ -1,5 +1,6 @@
 ---
 title: "谈谈我认识的各种ops"
+tags: ["DevOps", "云原生", "软件工程"]
 date: 2022-09-07T10:00:55+08:00
 featured_image: '/images/post-0003.jpg'
 summary: '运维工作可能是枯燥的，但结合其他领域的内容后，又会焕发生机。'

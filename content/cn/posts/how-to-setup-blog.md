@@ -1,5 +1,6 @@
 ---
 title: "如何建博客"
+tags: ["效率工具", "软件工程", "个人成长"]
 date: 2022-09-06T15:18:44+08:00
 draft: false
 featured_image: '/images/post-0002.jpg'

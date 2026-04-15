@@ -1,5 +1,6 @@
 ---
 title: "软件测试的SaaS平台"
+tags: ["测试", "效率工具", "DevOps"]
 date: 2022-10-12T15:19:55+08:00
 draft: false
 featured_image: '/images/post-0012.jpg'

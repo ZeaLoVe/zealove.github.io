@@ -1,5 +1,6 @@
 ---
 title: "重学golang"
+tags: ["Golang", "软件工程", "个人成长"]
 date: 2022-09-21T15:51:55+08:00
 draft: true
 featured_image: '/images/post-0006.jpg'

@@ -1,5 +1,6 @@
 ---
 title: "关于如何做决定"
+tags: ["个人成长", "商业探索"]
 date: 2022-12-01T16:38:00+08:00
 draft: false
 featured_image: '/images/post-0017.jpg'

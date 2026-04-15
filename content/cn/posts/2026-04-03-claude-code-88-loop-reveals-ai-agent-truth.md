@@ -1,5 +1,6 @@
 ---
 title: "Claude Code架构：88行核心循环揭示AI Agent真相"
+tags: ["AI-Agent", "AI编程", "软件工程"]
 date: 2026-04-03T17:20:00+08:00
 featured_image: '/images/2026-04-03-claude-code-88-loop-reveals-ai-agent-truth.jpg'
 summary: "Claude Code 用 88 行代码揭开了一个真相：AI Agent 没有那么神秘。"

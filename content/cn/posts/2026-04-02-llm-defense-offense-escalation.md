@@ -1,5 +1,6 @@
 ---
 title: "LLM攻防的系统性升级"
+tags: ["AI安全", "AI-Agent", "AI时代"]
 date: 2026-04-02T16:05:00+08:00
 featured_image: '/images/llm-defense-offense-escalation.jpg'
 summary: '当AI同时成为攻击面和武器：context window让LLM应用从外部被劫持，LLM的语义理解能力让匿名识别成为可能，AI驱动的供应链攻击变得更精密，而过度依赖AI加速开发正在积累新型技术债务。'

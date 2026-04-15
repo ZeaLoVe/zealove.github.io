@@ -1,5 +1,6 @@
 ---
 title: "AI-Agent的架构与身份"
+tags: ["AI-Agent", "AI时代", "AI编程", "软件工程"]
 date: 2026-04-02T14:00:00+08:00
 featured_image: '/images/ai-tech-cover.jpg'
 summary: '3月底，Claude Code源码泄露事件中，有一个细节被很多人忽略了。'

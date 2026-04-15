@@ -1,5 +1,6 @@
 ---
 title: "收集的一些秘籍"
+tags: ["效率工具", "AI时代"]
 date: 2022-12-01T16:35:00+08:00
 draft: true
 featured_image: '/images/post-0017.jpg'

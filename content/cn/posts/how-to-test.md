@@ -1,5 +1,6 @@
 ---
 title: "软件测试之我见"
+tags: ["测试", "软件工程"]
 date: 2022-09-22T15:00:55+08:00
 draft: false
 featured_image: '/images/post-0005.jpg'

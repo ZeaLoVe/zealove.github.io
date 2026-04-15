@@ -1,5 +1,6 @@
 ---
 title: "知识管理没有银弹"
+tags: ["知识管理", "AI-Agent", "AI时代", "软件工程", "AI编程"]
 date: 2026-04-10T08:56:00+08:00
 featured_image: '/images/knowledge-management-no-silver-bullet.jpg'
 summary: 'AI Agent 时代，真正的竞争力不在于模型有多聪明，而在于它背后那套"记忆系统"有多可靠。'

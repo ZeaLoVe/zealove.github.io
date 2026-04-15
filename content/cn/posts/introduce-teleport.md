@@ -1,5 +1,6 @@
 ---
 title: "介绍teleport"
+tags: ["DevOps", "效率工具", "云原生"]
 date: 2022-09-06T15:51:55+08:00
 draft: false
 featured_image: '/images/post-0008.jpg'

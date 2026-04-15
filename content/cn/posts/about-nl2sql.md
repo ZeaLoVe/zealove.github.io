@@ -1,5 +1,6 @@
 ---
 title: "关于自然语言转SQL"
+tags: ["数据库", "机器学习", "AI时代"]
 date: 2023-04-24T11:32:17+08:00
 featured_image: '/images/post-0015.jpg'
 summary: '大模型对NL2SQL的影响'

@@ -1,5 +1,6 @@
 ---
 title: "关于开源的一些想法"
+tags: ["开源", "商业探索", "个人成长"]
 date: 2022-10-13T10:22:00+08:00
 draft: false
 featured_image: '/images/post-0013.jpg'

@@ -1,5 +1,6 @@
 ---
 title: "我的政治观"
+tags: ["个人成长", "生活"]
 date: 2022-09-09T09:02:17+08:00
 draft: true
 featured_image: '/images/post-0010.jpg'

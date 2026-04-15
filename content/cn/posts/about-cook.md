@@ -1,5 +1,6 @@
 ---
 title: "做饭的一些思考"
+tags: ["生活", "个人成长"]
 date: 2022-10-19T15:00:00+08:00
 draft: false
 featured_image: '/images/post-0014.jpg'

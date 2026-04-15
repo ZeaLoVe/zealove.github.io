@@ -1,5 +1,6 @@
 ---
 title: "个人可做的商业探索"
+tags: ["商业探索", "个人成长", "效率工具"]
 date: 2022-10-11T15:51:55+08:00
 draft: false
 featured_image: '/images/post-0011.jpg'

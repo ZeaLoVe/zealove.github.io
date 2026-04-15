@@ -1,5 +1,6 @@
 ---
 title: "AI Agent 的记忆之战：为什么知识管理才是下半场的核心竞争力"
+tags: ["知识管理", "AI-Agent", "AI时代"]
 date: 2026-04-05T20:07:00+08:00
 featured_image: '/images/ai-agent-de-ji-yi-zhi-zhan.jpg'
 summary: '知识管理正在成为 AI Agent 竞争的核心战场。当模型能力逐渐趋同，真正的差异化不再取决于"模型有多聪明"，而在于它背后的"记忆系统"有多可靠——Karpathy、谷歌、开发者社区，三条线索指向同一个答案。'

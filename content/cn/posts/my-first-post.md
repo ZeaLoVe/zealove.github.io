@@ -1,5 +1,6 @@
 ---
 title: "开始随便发点啥"
+tags: ["个人成长", "生活"]
 date: 2022-09-05T15:44:17+08:00
 draft: false
 featured_image: '/images/post-0001.jpg'

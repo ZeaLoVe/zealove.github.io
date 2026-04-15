@@ -1,5 +1,6 @@
 ---
 title: "通过数据库进行机器学习"
+tags: ["数据库", "机器学习", "软件工程"]
 date: 2023-03-29T09:30:55+08:00
 draft: false
 featured_image: '/images/post-0010.jpg'

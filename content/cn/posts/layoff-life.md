@@ -1,5 +1,6 @@
 ---
 title: "失业生活"
+tags: ["个人成长", "生活"]
 date: 2022-10-28T19:34:40+08:00
 draft: false
 featured_image: '/images/post-0015.jpg'
