@@ -39,6 +39,7 @@ DefaultContentLanguage = "zh"
 
 [params]
   description = "ZeaLoVe's personal blog - sharing thoughts on Cloud Native, Database, Go, and more."
+  custom_css = ["ananke/css/fixes.css", "ananke/css/highlighting.css"]
   text_color = ""
   author = ""
   favicon = ""
