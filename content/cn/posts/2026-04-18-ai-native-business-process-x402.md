@@ -4,7 +4,7 @@ date: 2026-04-18
 draft: false
 tags: ["AI", "Agent", "x402", "业务流程", "架构设计"]
 categories: ["AI"]
-description: "以 x402 协议为解剖样本，探讨 AI 原生业务流程的本质特征与重构逻辑，提出意图驱动、破除断点、人机协作、能力飞轮四维设计框架。"
+summary: "以 x402 协议为解剖样本，探讨 AI 原生业务流程的本质特征与重构逻辑，提出意图驱动、破除断点、人机协作、能力飞轮四维设计框架。"
 featured_image: '/image/2026-04-18-ai-native-business-process-x402.png'
 ---
 
