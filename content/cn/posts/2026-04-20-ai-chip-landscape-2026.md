@@ -3,7 +3,7 @@ title: "算力战国：AI芯片格局与淘汰赛"
 date: 2026-04-20
 slug: ai-chip-landscape-2026
 categories: ["AI时代"]
-tags: ["AI时代", "芯片", "算力", "竞争格局"]
+tags: ["AI时代"]
 featured_image: '/image/ai-chip-landscape-2026.png'
 ---
 
