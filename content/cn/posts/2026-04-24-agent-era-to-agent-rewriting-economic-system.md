@@ -1,14 +1,10 @@
 ---
 title: "Agent时代启示录：To Agent正在重写经济系统的底层逻辑"
-date: 2026-04-24
-slug: agent-era-to-agent-rewriting-economic-system
-categories: ["AI时代"]
+date: 2026-04-24T17:30:00+08:00
 tags: ["AI时代", "AI-Agent", "商业探索"]
 featured_image: '/image/agent-era-to-agent-rewriting-economic-system.png'
-description: "Anthropic 的 DAU 仅为 ChatGPT 的 2%，但两家 ARR 已追平。这不是逆袭，是旧度量衡失效的信号。当 Agent 同时成为生产者和消费者，一个从未出现过的主角登上了经济舞台。"
+summary: 'Anthropic 的 DAU 仅为 ChatGPT 的 2%，但两家 ARR 已追平。这不是逆袭，是旧度量衡失效的信号。当 Agent 同时成为生产者和消费者，一个从未出现过的主角登上了经济舞台。'
 ---
-
-<!--more-->
 
 ## DAU 是个旧故事
 
