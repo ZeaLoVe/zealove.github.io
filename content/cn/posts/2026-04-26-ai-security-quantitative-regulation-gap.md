@@ -1,10 +1,10 @@
 ---
 title: "AI安全的两难：政策逼着证明安全，技术却拿不出证据"
-date: 2026-04-26
+date: 2026-04-26T12:30:00+08:00
 slug: ai-security-quantitative-regulation-gap
-categories: ["技术"]
 tags: ["AI安全", "AI时代", "软件工程"]
 featured_image: '/image/ai-security-regulation-tech.png'
+summary: '政策要求高风险AI提供可量化安全证明，但既无度量衡也无标准。Internal Safety Collapse让95%以上的安全测试失效，SafeRedirect通过"有尊严地失败"将失效率压至8%。技术改善与监管证明之间，横亘着一条尚未被跨越的鸿沟。'
 ---
 
 ## 一个没有度量衡的考场
