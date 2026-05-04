@@ -5,7 +5,7 @@ draft: false
 tags: ["AI", "Agent", "x402", "业务流程", "架构设计"]
 categories: ["AI"]
 summary: "以 x402 协议为解剖样本，探讨 AI 原生业务流程的本质特征与重构逻辑，提出意图驱动、破除断点、人机协作、能力飞轮四维设计框架。"
-featured_image: '/image/2026-04-18-ai-native-business-process-x402.png'
+featured_image: '/images/2026-04-18-ai-native-business-process-x402.png'
 ---
 
 2025 年是 AI Agent 元年。ChatGPT 通过「图灵测试」让 AI 从问答机器进化为对话伙伴；DeepSeek/Qwen/Llama 开源模型将推理成本压缩了 100 倍，让 AI 能力从云端走进终端；随后 AI Agent 从「被动响应」向「主动调用工具」升级。这三个拐点叠加在一起，使得 AI 从一项「能力」变成了一种「执行主体」。

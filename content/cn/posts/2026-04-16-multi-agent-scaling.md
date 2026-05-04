@@ -4,7 +4,7 @@ date: 2026-04-16
 slug: multi-agent-scaling
 categories: ["技术"]
 tags: ["AI-Agent", "AI时代", "软件工程"]
-featured_image: '/image/multi-agent-scaling.png'
+featured_image: '/images/multi-agent-scaling.png'
 ---
 
 去年年底，一位名叫 Will 的独立开发者在网上分享了一组数字：他在 54 个波次中并行调度 AI 智能体，累计完成 321 个文件的工作量，覆盖代码、文档、音频等多个领域，核心工作压缩在 30 分钟内完成。

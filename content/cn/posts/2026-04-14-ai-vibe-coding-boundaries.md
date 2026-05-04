@@ -4,7 +4,7 @@ date: 2026-04-14
 slug: ai-vibe-coding-boundaries
 categories: ["AI", "工程实践"]
 tags: ["AI编程", "Vibe Coding", "Agent", "Claude Code", "工程化"]
-featured_image: '/image/ai-vibe-coding-boundaries.png'
+featured_image: '/images/ai-vibe-coding-boundaries.png'
 ---
 
 上周，Dev.to 上有一篇有趣的文章：有人用两天时间、130 个 Rust 源文件、55,963 行代码、1,647 个测试用例，构建了一个完整的 CLI 工具。真正有意思的不是这个数字——而是这个团队在设计之初就定下了一条铁律：八个 crate 之间必须保持单向无环依赖，政策运行时注入而非编译期导入。这意味着什么？意味着即使有了 AI 帮助，架构设计依然需要人来拍板。

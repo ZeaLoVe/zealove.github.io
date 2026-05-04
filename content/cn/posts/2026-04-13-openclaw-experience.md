@@ -4,7 +4,7 @@ date: 2026-04-13
 slug: openclaw-experience
 categories: ["效率工具"]
 tags: ["OpenClaw", "AI助手", "Agent", "自动化", "工作流"]
-featured_image: '/image/2026-04-13-openclaw-experience.png'
+featured_image: '/images/2026-04-13-openclaw-experience.png'
 ---
 
 OpenClaw 是支持接入即时通讯软件的 AI Agent。和普通对话机器人的区别是：它不只是回答问题，它能读文件、写文件、执行脚本、配置定时任务、推送消息——基本上我平时在终端里做的那些事，它都能替我跑。

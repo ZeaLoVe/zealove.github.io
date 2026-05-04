@@ -4,7 +4,7 @@ date: 2026-04-20
 slug: ai-chip-landscape-2026
 categories: ["AI时代"]
 tags: ["AI时代"]
-featured_image: '/image/ai-chip-landscape-2026.png'
+featured_image: '/images/ai-chip-landscape-2026.png'
 ---
 
 2026年Q1，一组数据给火热的AI芯片赛道泼了一盆冷水：全球135家投身AI处理器研发的企业，其中99家是初创公司。而权威机构JPR的预测冰冷而直接——到2030年，这个数字将锐减至约25家。
