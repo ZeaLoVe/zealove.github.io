@@ -3,7 +3,7 @@ title: "LLM正在悄悄重塑你的写作：满意度上升，创造力去哪了
 date: 2026-05-07T14:34:00+08:00
 slug: llm-writing-creativity-paradox
 tags: ["AI时代", "效率工具", "个人成长"]
-featured_image: '/images/ai-tech-cover.jpg'
+featured_image: '/images/llm-writing-creativity-paradox_001.jpg'
 summary: '研究显示LLM辅助写作让用户满意度提升但创造力下降——AI在语法润色的外衣下改变了论证方向，且用户浑然不觉。'
 draft: false
 ---
