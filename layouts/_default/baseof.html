@@ -36,6 +36,28 @@
 <main class="pb7" role="main">
 {{ block "main" . }}{{ end }}
 </main>
+{{/* ---- 每日旋律播放器（所有页面） ---- */}}
+{{- $musicDir := "static/music/daily" -}}
+{{- $musicFiles := slice -}}
+{{- with os.ReadDir $musicDir -}}
+  {{- range . -}}
+    {{- if and (not .IsDir) (strings.HasSuffix .Name ".m4a") -}}
+      {{- $musicFiles = $musicFiles | append .Name -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $sorted := slice -}}
+{{- range $musicFiles -}}
+  {{- $sorted = $sorted | append (dict "name" . "date" (strings.TrimSuffix ".m4a" .)) -}}
+{{- end -}}
+{{- $sorted = sort $sorted "date" "desc" -}}
+{{- $names := slice -}}
+{{- range $sorted -}}
+  {{- $names = $names | append .name -}}
+{{- end -}}
+<script>window.__dmpFiles={{ $names | jsonify | safeJS }};</script>
+{{ partial "daily-melody-player.html" . }}
+
 {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
 </body>
 </html>

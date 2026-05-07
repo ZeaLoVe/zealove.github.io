@@ -1,0 +1,347 @@
+<style>
+#dmp {
+  position: fixed;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b2a3a 50%, #0d1b2a 100%);
+  border: 1px solid rgba(100, 150, 200, 0.25);
+  border-radius: 14px;
+  padding: 12px 14px;
+  width: 290px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  color: #c8d8e8;
+  font-size: 13px;
+  user-select: none;
+  touch-action: none;
+  transition: opacity 0.2s;
+}
+#dmp.dmp-mini { width: auto; padding: 8px 12px; }
+#dmp.dmp-hide { display: none; }
+#dmp.drag { opacity: 0.85; }
+
+#dmp-row1 { display: flex; align-items: center; justify-content: space-between; cursor: move; }
+.dmp-title { display: flex; align-items: center; gap: 6px; overflow: hidden; flex: 1; min-width: 0; }
+.dmp-icon { font-size: 15px; flex-shrink: 0; }
+.dmp-name { font-weight: 600; color: #e0eaf4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px; }
+.dmp-date { color: #6a8aaa; font-size: 11px; flex-shrink: 0; margin-left: 6px; }
+.dmp-btns { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+.dmp-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 6px;
+  color: #e94560;
+  border-radius: 6px;
+  transition: background 0.15s, transform 0.1s;
+  line-height: 1;
+}
+.dmp-btn:hover { background: rgba(233,69,96,0.1); transform: scale(1.15); }
+.dmp-btn:active { transform: scale(0.9); }
+.dmp-btn:disabled { opacity: 0.25; cursor: default; }
+.dmp-btn:disabled:hover { background: none; transform: none; }
+
+#dmp-prog { margin-top: 9px; }
+#dmp-prog-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(100, 150, 200, 0.2);
+  cursor: pointer;
+  outline: none;
+}
+#dmp-prog-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4a90c8, #2a6080);
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(100,150,200,0.5);
+}
+#dmp-prog-bar::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4a90c8, #2a6080);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 4px rgba(100,150,200,0.5);
+}
+#dmp-times { display: flex; justify-content: space-between; font-size: 11px; color: #6a8aaa; margin-top: 3px; }
+
+#dmp-list { margin-top: 10px; border-top: 1px solid rgba(100,150,200,0.15); padding-top: 8px; max-height: 170px; overflow-y: auto; }
+#dmp-list::-webkit-scrollbar { width: 4px; }
+#dmp-list::-webkit-scrollbar-thumb { background: rgba(100,150,200,0.3); border-radius: 2px; }
+.dmp-li { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 6px; cursor: pointer; color: #6a8aaa; transition: background 0.12s, color 0.12s; }
+.dmp-li:hover { background: rgba(100,150,200,0.1); color: #c8d8e8; }
+.dmp-li.on { background: rgba(74,144,200,0.15); color: #4a90c8; }
+.dmp-li-p { font-size: 9px; width: 12px; text-align: center; opacity: 0.5; }
+.dmp-li-d { font-size: 12px; }
+.dmp-empty { color: #4a6080; text-align: center; padding: 12px; }
+</style>
+
+<div id="dmp" style="top:80px;right:20px">
+  <div id="dmp-row1">
+    <div class="dmp-title">
+      <span class="dmp-icon">🎵</span>
+      <span class="dmp-name" id="dmp-name">加载中…</span>
+      <span class="dmp-date" id="dmp-date"></span>
+    </div>
+    <div class="dmp-btns">
+      <button class="dmp-btn" id="dmp-col" title="收起">⬇</button>
+      <button class="dmp-btn" id="dmp-prev" title="上一首">⏮</button>
+      <button class="dmp-btn" id="dmp-play" title="播放/暂停">▶</button>
+      <button class="dmp-btn" id="dmp-stop" title="停止">⏹</button>
+      <button class="dmp-btn" id="dmp-next" title="下一首">⏭</button>
+    </div>
+  </div>
+  <div id="dmp-prog">
+    <input type="range" id="dmp-prog-bar" min="0" max="100" value="0" step="0.5" style="width:100%">
+    <div id="dmp-times"><span id="dmp-ct">0:00</span><span id="dmp-dur">0:00</span></div>
+  </div>
+  <div id="dmp-list"></div>
+</div>
+
+<script>
+(function() {
+  var dir = '/music/daily/';
+  var storeKey = 'dmp_xy';
+  var stateKey = 'dmp_state';
+  var files = window.__dmpFiles || [];
+  var collapsed = true; // 默认收起
+
+  // 单例 audio，跨页面保持播放状态
+  if (!window.__dmpAudio) {
+    window.__dmpAudio = new Audio();
+    window.__dmpAudio.loop = false;
+  }
+  var audio = window.__dmpAudio;
+
+  var el = document.getElementById('dmp');
+  var progBar = document.getElementById('dmp-prog-bar');
+  var nameEl = document.getElementById('dmp-name');
+  var dateEl = document.getElementById('dmp-date');
+  var ctEl = document.getElementById('dmp-ct');
+  var durEl = document.getElementById('dmp-dur');
+  var listEl = document.getElementById('dmp-list');
+  var playBtn = document.getElementById('dmp-play');
+  var prevBtn = document.getElementById('dmp-prev');
+  var nextBtn = document.getElementById('dmp-next');
+  var colBtn = document.getElementById('dmp-col');
+
+  var cur = -1;
+  var collapsed = false;
+
+  if (!files.length) {
+    el.classList.add('dmp-hide');
+    return;
+  }
+
+  function fmt(fn) {
+    var p = fn.replace('.m4a','').split('-');
+    return (p.length===3) ? (parseInt(p[1])+'月'+parseInt(p[2])+'日') : fn;
+  }
+  function fmtT(s) {
+    if (!s || isNaN(s)) return '0:00';
+    var m = Math.floor(s/60), sec = Math.floor(s%60);
+    return m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+
+  function loadPos() {
+    try { var p = JSON.parse(localStorage.getItem(storeKey)); return p; } catch(e) { return null; }
+  }
+  function savePos(x, y) {
+    try { localStorage.setItem(storeKey, JSON.stringify({x:x, y:y})); } catch(e) {}
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem(stateKey, JSON.stringify({
+        cur: cur,
+        paused: audio.paused,
+        time: audio.currentTime,
+        src: audio.src,
+        collapsed: collapsed
+      }));
+    } catch(e) {}
+  }
+  function loadState() {
+    try { var s = JSON.parse(localStorage.getItem(stateKey)); return s; } catch(e) { return null; }
+  }
+
+  function renderList() {
+    if (collapsed) { listEl.innerHTML = ''; return; }
+    if (!files.length) { listEl.innerHTML = '<div class="dmp-empty">暂无音频</div>'; return; }
+    var html = '';
+    for (var i = 0; i < files.length; i++) {
+      var on = i === cur && !audio.paused;
+      var mark = on ? ' ▶' : '';
+      html += '<div class="dmp-li' + (i===cur ? ' on' : '') + '" data-i="'+i+'">' +
+        '<span class="dmp-li-p">'+mark+'</span>' +
+        '<span class="dmp-li-d">'+fmt(files[i])+'</span></div>';
+    }
+    listEl.innerHTML = html;
+    listEl.querySelectorAll('.dmp-li').forEach(function(item) {
+      item.addEventListener('click', function() { playFile(parseInt(this.getAttribute('data-i'))); });
+    });
+  }
+
+  function updateTitle() {
+    if (cur < 0) { nameEl.textContent = '每日旋律'; dateEl.textContent = ''; return; }
+    nameEl.textContent = fmt(files[cur]);
+    var p = files[cur].replace('.m4a','').split('-');
+    dateEl.textContent = (p.length===3) ? (p[0]+'/'+p[1]+'/'+p[2]) : '';
+  }
+
+  function playFile(idx, autoPlay) {
+    if (idx < 0 || idx >= files.length) return;
+    cur = idx;
+    audio.src = dir + files[idx];
+    audio.load();
+    if (autoPlay !== false) audio.play().catch(function(){});
+    updateTitle();
+    updateBtns();
+    renderList();
+    saveState();
+  }
+
+  function updateBtns() {
+    prevBtn.disabled = cur <= 0;
+    nextBtn.disabled = cur >= files.length - 1;
+    playBtn.textContent = audio.paused ? '▶' : '⏸';
+  }
+
+  function togglePlay() {
+    if (cur < 0) { playFile(findDefault()); return; }
+    if (audio.paused) audio.play().catch(function(){});
+    else audio.pause();
+    updateBtns();
+    renderList();
+    saveState();
+  }
+  function stop() { audio.pause(); audio.currentTime = 0; updateBtns(); renderList(); saveState(); }
+  function prev() { if (cur > 0) playFile(cur - 1); }
+  function next() { playFile(cur >= files.length - 1 ? 0 : cur + 1); }
+
+  function findDefault() {
+    var today = new Date().toISOString().slice(0,10);
+    for (var i = 0; i < files.length; i++) {
+      if (files[i].replace('.m4a','') === today) return i;
+    }
+    return 0;
+  }
+
+  // Drag
+  var dragging = false, dx = 0, dy = 0;
+  var row1 = document.getElementById('dmp-row1');
+
+  row1.addEventListener('mousedown', function(e) {
+    if (e.target.tagName === 'BUTTON') return;
+    dragging = true;
+    var r = el.getBoundingClientRect();
+    dx = e.clientX - r.left; dy = e.clientY - r.top;
+    el.classList.add('dmp-drag');
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    el.style.left = (e.clientX - dx) + 'px';
+    el.style.top = (e.clientY - dy) + 'px';
+    el.style.right = 'auto'; el.style.bottom = 'auto';
+    savePos(e.clientX - dx, e.clientY - dy);
+  });
+  document.addEventListener('mouseup', function() {
+    if (dragging) { dragging = false; el.classList.remove('dmp-drag'); }
+  });
+
+  row1.addEventListener('touchstart', function(e) {
+    if (e.target.tagName === 'BUTTON') return;
+    dragging = true;
+    var t = e.touches[0], r = el.getBoundingClientRect();
+    dx = t.clientX - r.left; dy = t.clientY - r.top;
+  }, {passive:true});
+  document.addEventListener('touchmove', function(e) {
+    if (!dragging) return;
+    var t = e.touches[0];
+    el.style.left = (t.clientX - dx) + 'px';
+    el.style.top = (t.clientY - dy) + 'px';
+    el.style.right = 'auto'; el.style.bottom = 'auto';
+    savePos(t.clientX - dx, t.clientY - dy);
+  }, {passive:true});
+  document.addEventListener('touchend', function() { dragging = false; });
+
+  // Buttons
+  playBtn.addEventListener('click', togglePlay);
+  document.getElementById('dmp-stop').addEventListener('click', stop);
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+  colBtn.addEventListener('click', function() {
+    collapsed = !collapsed;
+    el.classList.toggle('dmp-mini', collapsed);
+    colBtn.textContent = collapsed ? '⬆' : '⬇';
+    renderList();
+    saveState();
+  });
+
+  // Progress
+  progBar.addEventListener('input', function() {
+    if (!audio.duration) return;
+    audio.currentTime = audio.duration * (this.value / 100);
+  });
+
+  // Events
+  audio.addEventListener('timeupdate', function() {
+    if (audio.duration) {
+      progBar.value = (audio.currentTime / audio.duration * 100).toFixed(1);
+      ctEl.textContent = fmtT(audio.currentTime);
+    }
+  });
+  audio.addEventListener('loadedmetadata', function() {
+    durEl.textContent = fmtT(audio.duration);
+  });
+  audio.addEventListener('timeupdate', function() {
+    if (audio.duration) {
+      progBar.value = (audio.currentTime / audio.duration * 100).toFixed(1);
+      ctEl.textContent = fmtT(audio.currentTime);
+      if (!audio.paused) saveState();
+    }
+  });
+  audio.addEventListener('ended', function() { next(); });
+  audio.addEventListener('play', function() { playBtn.textContent = '⏸'; });
+  audio.addEventListener('pause', function() { playBtn.textContent = '▶'; });
+
+  var pos = loadPos();
+  if (pos) {
+    el.style.left = pos.x + 'px';
+    el.style.top = pos.y + 'px';
+    el.style.right = 'auto'; el.style.bottom = 'auto';
+  }
+
+  var st = loadState();
+  if (st) {
+    if (st.collapsed !== undefined) {
+      collapsed = st.collapsed;
+      el.classList.toggle('dmp-mini', collapsed);
+      colBtn.textContent = collapsed ? '⬆' : '⬇';
+    }
+  }
+  if (st && st.cur >= 0 && st.cur < files.length && st.src) {
+    // 有保存状态，恢复 src+时间，如果之前在播放则继续播放
+    cur = st.cur;
+    if (audio.src !== st.src) {
+      audio.src = st.src;
+      audio.load();
+    }
+    audio.currentTime = st.time || 0;
+    updateTitle();
+    updateBtns();
+    renderList();
+    if (!st.paused) { audio.play().catch(function(){}); }
+  } else {
+    playFile(findDefault());
+  }
+})();
+</script>
