@@ -1,5 +1,7 @@
 [ananke]
 show_recent_posts = true # show recent posts on the homepage
+show_categories = true # show categories terms on single pages
+copy_code = true # show a copy-to-clipboard button on code blocks (progressive enhancement)
 
 [ananke.home]
 content_alignment = "center" # options: left, center, right
@@ -255,3 +257,6 @@ label = "YouTube"
 color = "#cd201f"
 profile = "https://www.youtube.com/@%s"
 icon = "youtube" # font awesome brand icon name
+
+[ananke.hooks]
+verbosity = "error" # debug, info, warning, error

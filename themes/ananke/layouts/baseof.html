@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" {{- if eq site.Language.LanguageDirection "rtl" }} dir="rtl" {{- end }}>
+<html lang="{{ site.Language.Locale }}" {{- if eq site.Language.Direction "rtl" }} dir="rtl" {{- end }}>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -72,10 +72,21 @@
   {{- if .IsSection -}}{{- $body_classes = $body_classes | append "is-section" -}}{{- end -}}
 
   <body class="{{ delimit $body_classes " " }}">
+    {{- partials.Include "hook.html" (dict "hook" "body-start" "context" .) -}}
+    {{- partials.Include "hook.html" (dict "hook" "header-before" "context" .) -}}
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
+    {{- partials.Include "hook.html" (dict "hook" "header-after" "context" .) -}}
     <main class="pb7" role="main">
+      {{- partials.Include "hook.html" (dict "hook" "main-before" "context" .) -}}
       {{ block "main" . }}{{ end }}
+      {{- partials.Include "hook.html" (dict "hook" "main-after" "context" .) -}}
     </main>
+    {{- partials.Include "hook.html" (dict "hook" "footer-before" "context" .) -}}
     {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}
+    {{- partials.Include "hook.html" (dict "hook" "footer-after" "context" .) -}}
+    {{- partials.Include "hook.html" (dict "hook" "body-end" "context" .) -}}
   </body>
 </html>
+{{- with (templates.Defer (dict "key" "hooks-collector")) -}}
+  {{- partials.Include "func/hooks/collector-dump.html" . }}
+{{ end -}}
