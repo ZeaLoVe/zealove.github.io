@@ -1,9 +1,11 @@
 ---
 title: "是时候考虑多 Agent 安全了"
-date: 2026-06-15
+date: 2026-06-15T15:00:00+08:00
 slug: when-to-think-about-multi-agent-safety
-categories: ["技术"]
-tags: ["AI-Agent", "AI安全", "多代理系统", "DeepMind", "AGI"]
+tags: ["AI-Agent", "AI安全", "AI时代"]
+featured_image: '/images/when-to-think-about-multi-agent-safety.jpg'
+summary: 'DeepMind 1000 万美元建"多 Agent 安全"学科，Shah 说这块地图在他们出手之前是白的——AGI 可能来自蜂巢而非单体模型，护栏是为对话设计的，代理是行动。'
+draft: false
 ---
 
 上周，Google DeepMind 联合 Schmidt Sciences、ARIA、Cooperative AI Foundation 和 Google.org 宣布设立 1000 万美元研究基金，资助一个领域的研究。
