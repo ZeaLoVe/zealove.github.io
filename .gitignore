@@ -7,3 +7,6 @@ resources/_gen/
 
 # Local scripts (maintained locally only)
 scripts/
+
+# OpenClaw gh-issues workflow config (local only)
+WORKFLOW.md
