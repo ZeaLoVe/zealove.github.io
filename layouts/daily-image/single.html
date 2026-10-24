@@ -1,0 +1,69 @@
+{{/*
+  每日图像 单页模板（2026-10-24 新增）
+
+  背景：layouts/daily-image/ 下原本只有 list.html，没有 single.html，
+  导致 Hugo 回退到 _default/single.html —— 而每日图像的 .md 只有 frontmatter
+  没有正文，所以详情页渲染出来是「标题 + 空 <ul></ul>」，一张图都没有。
+  列表页因为自己写了 <img> 所以正常。
+
+  这里按 frontmatter 的 format 字段拼图片路径，渲染成与列表页一致的详情页。
+*/}}
+{{ define "main" }}
+{{ $css := resources.Get "css/daily-image.css" }}
+<style>{{ $css.Content }}</style>
+
+{{ $format := .Params.format }}
+{{ if not $format }}{{ $format = "jpg" }}{{ end }}
+
+<article class="di-single">
+  <header class="di-single-header">
+    <h1>{{ .Title }}</h1>
+    <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+      {{ .Date | time.Format "2006年1月2日" }}
+    </time>
+  </header>
+
+  <figure class="daily-image">
+    <img
+      src="/images/daily/{{ .Date.Format "2006-01-02" }}.{{ $format }}"
+      alt="{{ .Title }}"
+      width="1200"
+    />
+    <figcaption>
+      {{ with .Params.caption }}<span class="daily-caption">{{ . }}</span>{{ end }}
+      {{ with .Params.source }}<span class="daily-source">来源：{{ . }}</span>{{ end }}
+    </figcaption>
+  </figure>
+
+  {{ with .Content }}<div class="nested-copy-line-height lh-copy serif f4">{{ . }}</div>{{ end }}
+
+  <nav class="di-single-nav">
+    <a href="/daily-image/">← 返回每日图像专题</a>
+  </nav>
+</article>
+
+<style>
+.di-single {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.di-single-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.di-single .daily-image {
+  margin: 1.5rem 0;
+}
+.di-single .daily-source {
+  color: #999;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.di-single-nav {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+</style>
+{{ end }}
